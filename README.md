@@ -4,7 +4,9 @@
 
 ### Contributors
 Sam Havron
+
 Anant Kharkar
+
 Bill Young
 
 ### Motivation
