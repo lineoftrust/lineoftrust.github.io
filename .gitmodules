@@ -1,3 +1,6 @@
 [submodule "web/themes/hugo-incorporated"]
 	path = web/themes/hugo-incorporated
 	url = git@github.com:nilproductions/hugo-incorporated.git
+[submodule "web/themes/hugo-theme-minos"]
+	path = web/themes/hugo-theme-minos
+	url = https://github.com/carsonip/hugo-theme-minos
