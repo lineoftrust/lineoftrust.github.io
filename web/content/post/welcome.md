@@ -24,13 +24,13 @@ especially with regards to the (presumably) browser-controlled portion of the UI
 webpage content.
 
 ![](/images/lod.png)
-The Line of Death. *[Image credit](https://textslashplain.com/2017/01/14/the-line-of-death/)*
+<center>The Line of Death. *[Image credit](https://textslashplain.com/2017/01/14/the-line-of-death/)*</center>
 
 LoD attacks span the spectrum from manipulating URL names and tabs to spoofing new browser windows within the
 webpage's content area:
 
 ![](/images/zone4.png)
-Webpage controlled content. *[Image credit](https://textslashplain.com/2017/01/14/the-line-of-death/)*
+<center>Webpage controlled content. *[Image credit](https://textslashplain.com/2017/01/14/the-line-of-death/)*</center>
 
 
 [Certified Malice](https://textslashplain.com/2017/01/16/certified-malice/) is a
@@ -38,10 +38,16 @@ phishing attack that deceives users into trusting a page that looks nearly ident
 to the real site, including TLS certificates with realistic naming schemes.
 This threat becomes even more potent if combined with URL pixel manipulation.
 
+![](/images/prompt.png)
+<center>Spoofed OS prompt in browser. *[Image credit](https://malwaretips.com/blogs/wp-content/uploads/2015/02/adobe-flash-palyer-outdated-virus.jpg)*</center>
+
+LoD attacks encompass more than just browser-object and URL spoofing attacks.  Some attacks
+attempt to erode users' abilities to discern legitimate OS prompts from spoofed prompts
+displayed in the browser, often designed to scare users into downloading or updating software.
+
 Given the broad range of LoD-inspired attacks that have surfaced in the past
 year, the [Line of Trust](/) project seeks to improve the level of security a
-browser provides when compromises to trusted UI pixels and spoofed browser notifications are
-detected.
+browser provides when trusted UI pixels and browser notifications are compromised or forged.
 
 ### Goals for Line of Trust
 
@@ -52,6 +58,12 @@ Chromium](https://chromium.org) to develop LOTr.
 Our overarching goal is to reduce the feasibility of LoD attacks while providing
 increased transparency to the end-user. We are currently considering various computer
 vision techniques to build LOTr.
+
+### Relevant Resources
+
+*News, Blogs, & Forums* <br />
+[The Line of Death - Hacker News](https://news.ycombinator.com/item?id=13400291)<br />
+[The Line of Death - Text/Plain](https://textslashplain.com/2017/01/14/the-line-of-death/)
 
 ### Contributors
 - Anant Kharkar, undergraduate student at the University of Virginia
