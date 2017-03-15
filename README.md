@@ -1,6 +1,6 @@
 # Line of Trust
 
-***Annihilating the line of death for fun and pleasure***
+***Erasing the line of death for fun and pleasure***
 
 ### Contributors
 Sam Havron
