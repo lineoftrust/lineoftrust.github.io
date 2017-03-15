@@ -1,0 +1,3 @@
+[submodule "web/themes/hugo-incorporated"]
+	path = web/themes/hugo-incorporated
+	url = git@github.com:nilproductions/hugo-incorporated.git
