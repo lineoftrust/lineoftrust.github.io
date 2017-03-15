@@ -54,7 +54,7 @@ increased transparency to the end-user. We are currently considering various com
 vision techniques to build LOTr.
 
 ### Contributors
-- Sam Havron, undergraduate student at the University of Virginia
 - Anant Kharkar, undergraduate student at the University of Virginia
+- Sam Havron, undergraduate student at the University of Virginia
 - Bill Young, graduate student at the University of Virginia
 - Dave Evans, project advisor and computer science professor at the University of Virginia
