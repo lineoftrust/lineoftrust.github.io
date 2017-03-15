@@ -40,7 +40,7 @@ This threat becomes even more potent if combined with URL pixel manipulation.
 
 Given the broad range of LoD-inspired attacks that have surfaced in the past
 year, the [Line of Trust](/) project seeks to improve the level of security a
-browser provides when trusted UI pixels and spoofed browser notifications are
+browser provides when compromises to trusted UI pixels and spoofed browser notifications are
 detected.
 
 ### Goals for Line of Trust
@@ -48,7 +48,10 @@ detected.
 Specifically, we are interested in developing baked-in browser warnings for content that is
 suspected to be a LoD attack. We will be using [Google
 Chromium](https://chromium.org) to develop LOTr.
-- Vision
+
+Our overarching goal is to reduce the feasibility of LoD attacks while providing
+increased transparency to the end-user. We are currently considering various computer
+vision techniques to build LOTr.
 
 ### Contributors
 - Sam Havron, undergraduate student at the University of Virginia
