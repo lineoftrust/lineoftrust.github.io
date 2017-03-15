@@ -38,21 +38,21 @@ webpage&amp;rsquo;s content area:&lt;/p&gt;
 Webpage controlled content. &lt;em&gt;&lt;a href=&#34;https://textslashplain.com/2017/01/14/the-line-of-death/&#34; target=&#34;_blank&#34;&gt;Image credit&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;https://textslashplain.com/2017/01/16/certified-malice/&#34; target=&#34;_blank&#34;&gt;Certified Malice&lt;/a&gt; is a
-phishing attack that relies on to deceive users
-into trusting a page that looks nearly identical to the real site, including TLS
-certificates with realistic naming schemes.&lt;/p&gt;
+phishing attack that deceives users into trusting a page that looks nearly identical
+to the real site, including TLS certificates with realistic naming schemes.
+This threat becomes even more potent if combined with URL pixel manipulation.&lt;/p&gt;
 
-&lt;p&gt;This threat becomes even more valid if combined with URL pixel manipulation.&lt;/p&gt;
+&lt;p&gt;Given the broad range of LoD-inspired attacks that have surfaced in the past
+year, the &lt;a href=&#34;https://lineoftrust.github.io/&#34;&gt;Line of Trust&lt;/a&gt; project seeks to improve the level of security a
+browser provides when trusted UI pixels and spoofed browser notifications are
+detected.&lt;/p&gt;
 
-&lt;h3 id=&#34;goals&#34;&gt;Goals&lt;/h3&gt;
+&lt;h3 id=&#34;goals-for-line-of-trust&#34;&gt;Goals for Line of Trust&lt;/h3&gt;
 
-&lt;p&gt;We are interested in developing baked-in browser warnings on content that is
-suspected to be a LoD attack.&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Chromium&lt;/li&gt;
-&lt;li&gt;Vision&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;Specifically, we are interested in developing baked-in browser warnings for content that is
+suspected to be a LoD attack. We will be using &lt;a href=&#34;https://chromium.org&#34; target=&#34;_blank&#34;&gt;Google
+Chromium&lt;/a&gt; to develop LOTr.
+- Vision&lt;/p&gt;
 
 &lt;h3 id=&#34;contributors&#34;&gt;Contributors&lt;/h3&gt;
 

@@ -26,7 +26,6 @@ webpage content.
 ![](/images/lod.png)
 The Line of Death. *[Image credit](https://textslashplain.com/2017/01/14/the-line-of-death/)*
 
-
 LoD attacks span the spectrum from manipulating URL names and tabs to spoofing new browser windows within the
 webpage's content area:
 
@@ -35,18 +34,20 @@ Webpage controlled content. *[Image credit](https://textslashplain.com/2017/01/1
 
 
 [Certified Malice](https://textslashplain.com/2017/01/16/certified-malice/) is a
-phishing attack that relies on to deceive users
-into trusting a page that looks nearly identical to the real site, including TLS
-certificates with realistic naming schemes.
+phishing attack that deceives users into trusting a page that looks nearly identical 
+to the real site, including TLS certificates with realistic naming schemes.
+This threat becomes even more potent if combined with URL pixel manipulation.
 
-This threat becomes even more valid if combined with URL pixel manipulation.
+Given the broad range of LoD-inspired attacks that have surfaced in the past
+year, the [Line of Trust](/) project seeks to improve the level of security a
+browser provides when trusted UI pixels and spoofed browser notifications are
+detected.
 
-### Goals
+### Goals for Line of Trust
 
-We are interested in developing baked-in browser warnings on content that is
-suspected to be a LoD attack.
-
-- Chromium
+Specifically, we are interested in developing baked-in browser warnings for content that is
+suspected to be a LoD attack. We will be using [Google
+Chromium](https://chromium.org) to develop LOTr.
 - Vision
 
 ### Contributors
