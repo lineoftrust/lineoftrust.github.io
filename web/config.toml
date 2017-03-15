@@ -5,3 +5,6 @@ theme = "hugo-theme-minos"
 
 [params]
     katex = true
+[blackfriday]
+plainIDAnchors = true
+hrefTargetBlank = true

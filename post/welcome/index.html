@@ -79,21 +79,51 @@
         <div class="article-entry" itemprop="articleBody">
             
 
-<h1 id="line-of-trust">Line of Trust</h1>
+<h2 id="introducing-the-line-of-trust-lotr">Introducing the Line of Trust (LOTr)</h2>
 
 <p><strong><em>Erasing the line of death for fun and pleasure</em></strong></p>
 
-<h3 id="contributors">Contributors</h3>
-
-<p>Sam Havron</p>
-
-<p>Anant Kharkar</p>
-
-<p>Bill Young</p>
-
 <h3 id="motivation">Motivation</h3>
 
+<p>The <a href="https://textslashplain.com/2017/01/14/the-line-of-death/" target="_blank">Line of Death (LoD)</a> is a class of web
+browser attacks that target the very pixels of a browser UI on a given webpage,
+especially with regards to the (presumably) browser-controlled portion of the UI above
+webpage content.</p>
+
+<p><img src="/images/lod.png" alt="" />
+The Line of Death. <em><a href="https://textslashplain.com/2017/01/14/the-line-of-death/" target="_blank">Image credit</a></em></p>
+
+<p>LoD attacks span the spectrum from manipulating URL names and tabs to spoofing new browser windows within the
+webpage&rsquo;s content area:</p>
+
+<p><img src="/images/zone4.png" alt="" />
+Webpage controlled content. <em><a href="https://textslashplain.com/2017/01/14/the-line-of-death/" target="_blank">Image credit</a></em></p>
+
+<p><a href="https://textslashplain.com/2017/01/16/certified-malice/" target="_blank">Certified Malice</a> is a
+phishing attack that relies on to deceive users
+into trusting a page that looks nearly identical to the real site, including TLS
+certificates with realistic naming schemes.</p>
+
+<p>This threat becomes even more valid if combined with URL pixel manipulation.</p>
+
 <h3 id="goals">Goals</h3>
+
+<p>We are interested in developing baked-in browser warnings on content that is
+suspected to be a LoD attack.</p>
+
+<ul>
+<li>Chromium</li>
+<li>Vision</li>
+</ul>
+
+<h3 id="contributors">Contributors</h3>
+
+<ul>
+<li>Sam Havron, undergraduate student at the University of Virginia</li>
+<li>Anant Kharkar, undergraduate student at the University of Virginia</li>
+<li>Bill Young, graduate student at the University of Virginia</li>
+<li>Dave Evans, project advisor and computer science professor at the University of Virginia</li>
+</ul>
 
         </div>
 
@@ -103,13 +133,13 @@
             <h3>Contents</h3>
             <nav id="TableOfContents">
 <ul>
-<li><a href="#line-of-trust">Line of Trust</a>
-<ul>
 <li>
 <ul>
-<li><a href="#contributors">Contributors</a></li>
+<li><a href="#introducing-the-line-of-trust-lotr">Introducing the Line of Trust (LOTr)</a>
+<ul>
 <li><a href="#motivation">Motivation</a></li>
 <li><a href="#goals">Goals</a></li>
+<li><a href="#contributors">Contributors</a></li>
 </ul></li>
 </ul></li>
 </ul>

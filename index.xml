@@ -17,21 +17,51 @@
       <guid>https://lineoftrust.github.io/post/welcome/</guid>
       <description>
 
-&lt;h1 id=&#34;line-of-trust&#34;&gt;Line of Trust&lt;/h1&gt;
+&lt;h2 id=&#34;introducing-the-line-of-trust-lotr&#34;&gt;Introducing the Line of Trust (LOTr)&lt;/h2&gt;
 
 &lt;p&gt;&lt;strong&gt;&lt;em&gt;Erasing the line of death for fun and pleasure&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
 
-&lt;h3 id=&#34;contributors&#34;&gt;Contributors&lt;/h3&gt;
-
-&lt;p&gt;Sam Havron&lt;/p&gt;
-
-&lt;p&gt;Anant Kharkar&lt;/p&gt;
-
-&lt;p&gt;Bill Young&lt;/p&gt;
-
 &lt;h3 id=&#34;motivation&#34;&gt;Motivation&lt;/h3&gt;
 
+&lt;p&gt;The &lt;a href=&#34;https://textslashplain.com/2017/01/14/the-line-of-death/&#34; target=&#34;_blank&#34;&gt;Line of Death (LoD)&lt;/a&gt; is a class of web
+browser attacks that target the very pixels of a browser UI on a given webpage,
+especially with regards to the (presumably) browser-controlled portion of the UI above
+webpage content.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://lineoftrust.github.io/images/lod.png&#34; alt=&#34;&#34; /&gt;
+The Line of Death. &lt;em&gt;&lt;a href=&#34;https://textslashplain.com/2017/01/14/the-line-of-death/&#34; target=&#34;_blank&#34;&gt;Image credit&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;LoD attacks span the spectrum from manipulating URL names and tabs to spoofing new browser windows within the
+webpage&amp;rsquo;s content area:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://lineoftrust.github.io/images/zone4.png&#34; alt=&#34;&#34; /&gt;
+Webpage controlled content. &lt;em&gt;&lt;a href=&#34;https://textslashplain.com/2017/01/14/the-line-of-death/&#34; target=&#34;_blank&#34;&gt;Image credit&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://textslashplain.com/2017/01/16/certified-malice/&#34; target=&#34;_blank&#34;&gt;Certified Malice&lt;/a&gt; is a
+phishing attack that relies on to deceive users
+into trusting a page that looks nearly identical to the real site, including TLS
+certificates with realistic naming schemes.&lt;/p&gt;
+
+&lt;p&gt;This threat becomes even more valid if combined with URL pixel manipulation.&lt;/p&gt;
+
 &lt;h3 id=&#34;goals&#34;&gt;Goals&lt;/h3&gt;
+
+&lt;p&gt;We are interested in developing baked-in browser warnings on content that is
+suspected to be a LoD attack.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Chromium&lt;/li&gt;
+&lt;li&gt;Vision&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;contributors&#34;&gt;Contributors&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Sam Havron, undergraduate student at the University of Virginia&lt;/li&gt;
+&lt;li&gt;Anant Kharkar, undergraduate student at the University of Virginia&lt;/li&gt;
+&lt;li&gt;Bill Young, graduate student at the University of Virginia&lt;/li&gt;
+&lt;li&gt;Dave Evans, project advisor and computer science professor at the University of Virginia&lt;/li&gt;
+&lt;/ul&gt;
 </description>
     </item>
     
