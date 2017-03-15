@@ -30,7 +30,7 @@
     <meta name="keywords" content="">
     <meta name="author" content="">
 
-    <meta name="generator" content="Hugo 0.17" />
+    <meta name="generator" content="Hugo 0.18.1" />
 </head>
 
 
@@ -91,23 +91,29 @@ especially with regards to the (presumably) browser-controlled portion of the UI
 webpage content.</p>
 
 <p><img src="/images/lod.png" alt="" />
-The Line of Death. <em><a href="https://textslashplain.com/2017/01/14/the-line-of-death/" target="_blank">Image credit</a></em></p>
+<center>The Line of Death. <em><a href="https://textslashplain.com/2017/01/14/the-line-of-death/" target="_blank">Image credit</a></em></center></p>
 
 <p>LoD attacks span the spectrum from manipulating URL names and tabs to spoofing new browser windows within the
 webpage&rsquo;s content area:</p>
 
 <p><img src="/images/zone4.png" alt="" />
-Webpage controlled content. <em><a href="https://textslashplain.com/2017/01/14/the-line-of-death/" target="_blank">Image credit</a></em></p>
+<center>Webpage controlled content. <em><a href="https://textslashplain.com/2017/01/14/the-line-of-death/" target="_blank">Image credit</a></em></center></p>
 
 <p><a href="https://textslashplain.com/2017/01/16/certified-malice/" target="_blank">Certified Malice</a> is a
 phishing attack that deceives users into trusting a page that looks nearly identical
 to the real site, including TLS certificates with realistic naming schemes.
 This threat becomes even more potent if combined with URL pixel manipulation.</p>
 
+<p><img src="/images/prompt.png" alt="" />
+<center>Spoofed OS prompt in browser. <em><a href="https://malwaretips.com/blogs/wp-content/uploads/2015/02/adobe-flash-palyer-outdated-virus.jpg" target="_blank">Image credit</a></em></center></p>
+
+<p>LoD attacks encompass more than just browser-object and URL spoofing attacks.  Some attacks
+attempt to erode users&rsquo; abilities to discern legitimate OS prompts from spoofed prompts
+displayed in the browser, often designed to scare users into downloading or updating software.</p>
+
 <p>Given the broad range of LoD-inspired attacks that have surfaced in the past
 year, the <a href="/">Line of Trust</a> project seeks to improve the level of security a
-browser provides when compromises to trusted UI pixels and spoofed browser notifications are
-detected.</p>
+browser provides when trusted UI pixels and browser notifications are compromised or forged.</p>
 
 <h3 id="goals-for-line-of-trust">Goals for Line of Trust</h3>
 
@@ -118,6 +124,12 @@ Chromium</a> to develop LOTr.</p>
 <p>Our overarching goal is to reduce the feasibility of LoD attacks while providing
 increased transparency to the end-user. We are currently considering various computer
 vision techniques to build LOTr.</p>
+
+<h3 id="relevant-resources">Relevant Resources</h3>
+
+<p><em>News, Blogs, &amp; Forums</em> <br />
+<a href="https://news.ycombinator.com/item?id=13400291" target="_blank">The Line of Death - Hacker News</a><br />
+<a href="https://textslashplain.com/2017/01/14/the-line-of-death/" target="_blank">The Line of Death - Text/Plain</a></p>
 
 <h3 id="contributors">Contributors</h3>
 
@@ -142,6 +154,7 @@ vision techniques to build LOTr.</p>
 <ul>
 <li><a href="#motivation">Motivation</a></li>
 <li><a href="#goals-for-line-of-trust">Goals for Line of Trust</a></li>
+<li><a href="#relevant-resources">Relevant Resources</a></li>
 <li><a href="#contributors">Contributors</a></li>
 </ul></li>
 </ul></li>
@@ -175,6 +188,10 @@ vision techniques to build LOTr.</p>
     <nav id="article-nav">
     
     
+    <a href="/categories/" id="article-nav-older" class="article-nav-link-wrap">
+        <div class="article-nav-title">Categories&nbsp;<span>&gt;</span></div>
+    </a>
+    
 </nav>
 </article>
 
@@ -193,6 +210,11 @@ vision techniques to build LOTr.</p>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js" integrity="sha256-KbfTjB0WZ8vvXngdpJGY3Yp3xKk+tttbqClO11anCIU=" crossorigin="anonymous"></script>
     <script>hljs.initHighlightingOnLoad();</script>
 
+    
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css" integrity="sha384-wITovz90syo1dJWVh32uuETPVEtGigN07tkttEqPv+uR2SE/mbQcG7ATL28aI9H0" crossorigin="anonymous">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.js" integrity="sha384-/y1Nn9+QQAipbNQWU65krzJralCnuOasHncUFXGkdwntGeSvQicrYkiUBwsgUqc1" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/contrib/auto-render.min.js" integrity="sha256-ExtbCSBuYA7kq1Pz362ibde9nnsHYPt6JxuxYeZbU+c=" crossorigin="anonymous"></script>
+        <script>renderMathInElement(document.body);</script>
     
     <script>
         document.getElementById('main-nav-toggle').addEventListener('click', function () {
