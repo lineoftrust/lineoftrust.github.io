@@ -69,4 +69,5 @@ vision techniques to build LOTr.
 - Anant Kharkar, undergraduate student at the University of Virginia
 - Sam Havron, undergraduate student at the University of Virginia
 - Bill Young, graduate student at the University of Virginia
+- Joshua Holtzman, undergraduate student at the University of Virginia
 - Dave Evans, project advisor and computer science professor at the University of Virginia
