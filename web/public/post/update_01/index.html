@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Status Update - Week 2 // Line Of Trust</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta property="og:title" content="Status Update - Week 2" />
+<meta property="og:description" content="" />
+<meta property="og:type" content="website" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:url" content="https://lineoftrust.github.io/post/update_01/" />
+
+
+    <link href="" rel="alternate" type="application/rss+xml" title="Line Of Trust" />
+    <link rel="shortcut icon" href="/favicon.png">
+
+    <link href="https://lineoftrust.github.io/webfonts/ptserif/main.css" rel='stylesheet' type='text/css'>
+    <link href="https://lineoftrust.github.io/webfonts/source-code-pro/main.css" rel="stylesheet" type="text/css">
+
+    <link rel="stylesheet" href="https://lineoftrust.github.io/css/style.css">
+
+    <link href="http://gmpg.org/xfn/11" rel="profile">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+
+    <meta name="generator" content="Hugo 0.18.1" />
+</head>
+
+
+<body>
+<div id="container">
+    <header id="header">
+    <div id="header-outer" class="outer">
+        <div id="header-inner" class="inner">
+            <a id="main-nav-toggle" class="nav-icon" href="javascript:;"></a>
+            <a id="logo" class="logo-text" href="https://lineoftrust.github.io/">Line Of Trust</a>
+            <nav id="main-nav">
+                
+            </nav>
+            <nav id="sub-nav">
+                <div id="search-form-wrap">
+                </div>
+            </nav>
+        </div>
+    </div>
+</header>
+    <section id="main" class="outer">
+        <article class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        <header class="article-header">
+            <h1 class="article-title" itemprop="name">Status Update - Week 2</h1>
+        </header>
+        
+        <div class="article-meta">
+            <a href="/post/update_01/" class="article-date">
+                <time datetime='2017-03-30T22:51:23.000-04:00' itemprop="datePublished">2017-03-30</time>
+            </a>
+            
+            
+            <div class="post-categories">
+                <div class="article-category">
+                    
+                    
+                    <a class="article-category-link" href="https://lineoftrust.github.io//categories/project-update">project update</a>
+                    
+                </div>
+            </div>
+            
+            
+        </div>
+        <div class="article-entry" itemprop="articleBody">
+            
+
+<h2 id="status-update-week-2">Status Update - Week 2</h2>
+
+<h3 id="motivation-goals">Motivation &amp; Goals</h3>
+
+<p>User interfaces are vitally important components of overall security, bridging the gap that exists between system designers, security experts, and the end users for whom the systems are being designed.  In particular, the user interfaces of <strong>web browsers</strong> prove vitally important to security given the sensitive nature of content provided by users&mdash;information spanning from banking to healthcare and everything in between.</p>
+
+<p>Claude Shannon, widely regarded as the &ldquo;father of the information age,&rdquo; aptly summarized Kerchoff&rsquo;s Principle of security through open design:</p>
+
+<blockquote>
+<p><em>&ldquo;The enemy knows the system.&rdquo;</em></p>
+</blockquote>
+
+<p>When applied to browser UI, it is our belief that this principle necessitates the UI be designed in such a fashion that imitation attacks&mdash;one website masquerading as another&mdash;must never be allowed to compromise or otherwise complicate user security.</p>
+
+<p>Our preliminary literature review has uncovered a myriad of shortcomings in the user interfaces of web browsers, and we have concluded that these shortcomings generally fall into two distinct categories:</p>
+
+<ol>
+<li>Inability to easily discern between trusted and untrusted content</li>
+<li>Inability to easily validate website identities</li>
+</ol>
+
+<p>During our review, we were quite surprised to discover an apparent dearth of academic literature specifically addressing web browser UI.  Instead, much of the existing discussion is relegated to blog posts, security articles, and developer forums.   We believe that the area of web browser UI poses a series of compelling questions deserving of dedicated analysis and research.  To this end, we seek to coalesce, assess, and expand upon existing knowledge in this domain in order to effectively systematize knowledge for the benefit of future research work.  It is our hope that this systematization of knowledge will shed light on unsolved challenges and provide a framework of prioritization that can guide researchers (and perhaps even ourselves) in improving security via better user interfaces in future work.</p>
+
+<h3 id="the-state-of-browser-ui-problematic">The State of Browser UI:  Problematic</h3>
+
+<h4 id="1-the-line-of-death">1)  The Line of Death</h4>
+
+<p>The <a href="https://textslashplain.com/2017/01/14/the-line-of-death/" target="_blank">Line of Death (LoD)</a> is a class of web browser attacks that target the very pixels of a browser UI on a given webpage, especially with regards to the (presumably) browser-controlled portion of the UI above
+webpage content.</p>
+
+<p><img src="/images/lod.png" alt="" />
+<center>The Line of Death. <em><a href="https://textslashplain.com/2017/01/14/the-line-of-death/" target="_blank">Image credit</a></em></center></p>
+
+<p>LoD attacks span the spectrum from manipulating URL names and tabs to spoofing new browser windows within the webpage&rsquo;s content area:</p>
+
+<p><img src="/images/zone4.png" alt="" />
+<center>Webpage controlled content. <em><a href="https://textslashplain.com/2017/01/14/the-line-of-death/" target="_blank">Image credit</a></em></center></p>
+
+<p><a href="https://textslashplain.com/2017/01/16/certified-malice/" target="_blank">Certified Malice</a> is a phishing attack that deceives users into trusting a page that looks nearly identical to the real site, including TLS certificates with realistic naming schemes.  This threat becomes even more potent if combined with URL pixel manipulation.</p>
+
+<p><img src="/images/prompt.png" alt="" />
+<center>Spoofed OS prompt in browser. <em><a href="https://malwaretips.com/blogs/wp-content/uploads/2015/02/adobe-flash-palyer-outdated-virus.jpg" target="_blank">Image credit</a></em></center></p>
+
+<p>LoD attacks encompass more than just browser-object and URL spoofing attacks.  Some attacks attempt to erode users&rsquo; abilities to discern legitimate OS prompts from spoofed prompts displayed in the browser, often designed to scare users into downloading or updating software.  Advanced JavaScript and HTML5 features have effectively blurred the line between browser UI and dynamically generated (and hence untrusted) page content.</p>
+
+<p>Given the broad range of LoD-inspired attacks that have surfaced in the past year, the <a href="/">Line of Trust</a> project seeks to generate potential solutions that improve the level of security a browser provides when trusted UI pixels and browser notifications are compromised or forged.</p>
+
+<h4 id="2-website-identity-validation-and-verification">2)  Website Identity Validation and Verification</h4>
+
+<p>In September of 2016, Googler Owen Campbell-Moore posted a series of thoughts on browser UI titled <a href="https://medium.com/@owencm/rethinking-url-bars-as-primary-browser-ui-e2118339d2c0" target="_blank">&ldquo;Rethinking URL bars as primary browser UI.&rdquo; </a>   After consulting the Google Chrome team, he came to the contentious conclusion that the URL bar may be an anachronism in the reality of today&rsquo;s Web, kept alive for the historical reason of &ldquo;we&rsquo;ve always done it that way.&rdquo;  He specifically identified three primary reasons why UI designers have retained the URL bar:</p>
+
+<ol>
+<li>So users understand who they&rsquo;re talking to</li>
+<li>So users can know where on a site they are, and navigate by modifying the URL</li>
+<li>So users can share links to what they&rsquo;re currently looking at</li>
+</ol>
+
+<p>Campbell-Moore notes that today&rsquo;s URL &ldquo;omnibar&rdquo; is responsible for far too many aspects of the browser UI to be effective (site identity, location within the site, security status, geographic location indicator, pop-up control, plug-in status) and argues that these constraints should be satisfied via alternative methods.</p>
+
+<p>In essence, he offers that (1) and (2) are not compelling enough reasons to maintain the URL bar.  In its place, he suggests establishing an <em>origin-to-local-brand-mapping system</em>, managed by search engines (presumably Google), that would serve to validate the identities of a certain subset of popular websites, displaying trusted identity information where the complicated URL omnibar is presently situated.  (And, of course, this identity information would be unspoofable, much like how &ldquo;www.facebook.com&rdquo; belongs to Facebook and cannot be issued to anyone else.)</p>
+
+<blockquote>
+<p><em>&ldquo;When a user is on Facebook, why doesn&rsquo;t the URL bar just say &lsquo;Facebook,&rsquo; with a small Facebook logo?  Would that not more clearly help the user understand the literal origin of the content?  Clearly, we would need a way for browsers to determine the locally known brand name and logo of all sites.&rdquo;</em></p>
+</blockquote>
+
+<p>We believe that Campbell-Moore has raised a hugely important point, even if abolishing the URL bar may be infeasible:
+&gt;If we were to redesign the web browser UI from scratch, how would we do it?</p>
+
+<p>It is our hope that a potential answer to this question would effectively thwart all the aforementioned UI shortcomings.</p>
+
+<h3 id="moving-forward">Moving Forward</h3>
+
+<p>Given the shortcomings and opportunities for study identified above, we plan to investigate four areas in the realm of usable browser security: spoofing legitimate browser UI elements, picture-in-picture attacks, exact reproductions of websites, and full browser UI redesigns.</p>
+
+<p>For each of these four areas, we will follow a specific system, defined below, for gathering and analyzing information.</p>
+
+<ol>
+<li><p>First, we determine what past work has been done in that area, as well as relevant security problems.</p></li>
+
+<li><p>Next, we examine old solutions to these early problems. These solutions patch and target specific types of attacks, and are very narrow in scope. Many of these solutions are therefore obsolete due to more recent changes in web usage, such as HTML5 and browser modifications. However, these new developments yield new problems within their respective areas.</p></li>
+
+<li><p>We devise various potential unbounded solutions to these problems and categorize them into three types:   UI solutions (which deal with user awareness), experimental techniques (solutions based on vision, NLP, and other cutting edge techniques), and infrastructure redesign (solutions that require more extensive change, potentially even beyond the browser).</p></li>
+</ol>
+
+<p>Stage 1 is underway and will soon transition to stage 2.  The target deliverable on April 28th is a quality SoK that will define the problem, provide our preliminary reasoning on the issues at stake, suggest some potential avenues to fix the problems, and conclude with open research questions.  We intend to carefully reason about underlying connections among the UI issues that may point toward a common &ldquo;best&rdquo; solution.</p>
+
+<h3 id="relevant-resources">Relevant Resources</h3>
+
+<p><a href="https://textslashplain.com/2017/01/14/the-line-of-death/" target="_blank">The Line of Death - Text/Plain</a>  Details of spoofed browser prompts, untrusted and trusted information zones, and picture-in-picture attacks<br /><br />
+<a href="https://medium.com/@owencm/rethinking-url-bars-as-primary-browser-ui-e2118339d2c0" target="_blank">Rethinking URL bars as primary browser UI</a> Replace the browser URL bar with an &ldquo;identity bar&rdquo; managed by search engines, since &ldquo;no one uses the URL bar anymore&rdquo;<br /><br />
+<a href="https://www.w3.org/2005/Security/usability-ws/papers/02-hp-petname/" target="_blank">PetNames</a> Associate a catchphrase with trusted websites in order to quickly identify fraudulent copies of the websites (evident if the catchphrase is absent)<br /><br />
+<a href="https://www.tripwire.com/state-of-security/latest-security-news/tech-support-scam-uses-website-elements-spoof-microsoft-support-page/" target="_blank">Microsoft Support Page - LoD Attack</a> Very recent LoD attack on the Microsoft Support Page; takes advantage of fullscreen HTML5<br /><br />
+<a href="https://books.google.com/books?id=xxAbEcNlIwwC&amp;pg=PA499&amp;lpg=PA499&amp;dq=spoofed+browser+elements&amp;source=bl&amp;ots=JUoFxxxosB&amp;sig=rVMyxVbg6eKAmRiiRJYBWL76bIY&amp;hl=en&amp;sa=X&amp;ved=0ahUKEwjqwrLXo_jSAhXM7CYKHeSyBZcQ6AEIHDAA#v=onepage&amp;q=spoofed%20browser%20elements&amp;f=false" target="_blank">Verification Engine</a> LoD defense mechanism c. 2006 that highlights the borders of trusted UI elements when the mouse hovers over them (could be mimicked with advanced JavaScript and HTML5 today)<br /><br />
+<a href="https://crypto.stanford.edu/SpoofGuard/" target="_blank">SpoofGuard</a>  Tactics to defend against fraudulent websites c. 2004; most of the techniques are outdated now<br /><br />
+<a href="https://eprint.iacr.org/2004/155.pdf" target="_blank">TrustBar</a> Suggests that &ldquo;&hellip;a realistic usability test should provide a reasonable level of introduction of any new mechanism, balancing this with the risk of causing users to be overly-aware of security.&rdquo;</p>
+
+<h3 id="contributors">Contributors</h3>
+
+<ul>
+<li>Anant Kharkar, undergraduate student at the University of Virginia</li>
+<li>Sam Havron, undergraduate student at the University of Virginia</li>
+<li>Bill Young, graduate student at the University of Virginia</li>
+<li>Joshua Holtzman, undergraduate student at the University of Virginia</li>
+<li>Dave Evans, project advisor and computer science professor at the University of Virginia</li>
+</ul>
+
+        </div>
+
+        
+        
+        <div class="article-toc" >
+            <h3>Contents</h3>
+            <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#status-update-week-2">Status Update - Week 2</a>
+<ul>
+<li><a href="#motivation-goals">Motivation &amp; Goals</a></li>
+<li><a href="#the-state-of-browser-ui-problematic">The State of Browser UI:  Problematic</a>
+<ul>
+<li><a href="#1-the-line-of-death">1)  The Line of Death</a></li>
+<li><a href="#2-website-identity-validation-and-verification">2)  Website Identity Validation and Verification</a></li>
+</ul></li>
+<li><a href="#moving-forward">Moving Forward</a></li>
+<li><a href="#relevant-resources">Relevant Resources</a></li>
+<li><a href="#contributors">Contributors</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+        </div>
+        
+        
+
+        
+
+
+        
+        <footer class="article-footer">
+            <ul class="article-tag-list">
+                
+                <li class="article-tag-list-item">
+                    <a class="article-tag-list-link" href="https://lineoftrust.github.io//tags/talk">talk
+                    </a>
+                </li>
+                
+                <li class="article-tag-list-item">
+                    <a class="article-tag-list-link" href="https://lineoftrust.github.io//tags/lineoftrust">lineoftrust
+                    </a>
+                </li>
+                
+                <li class="article-tag-list-item">
+                    <a class="article-tag-list-link" href="https://lineoftrust.github.io//tags/user-interface">user interface
+                    </a>
+                </li>
+                
+                <li class="article-tag-list-item">
+                    <a class="article-tag-list-link" href="https://lineoftrust.github.io//tags/security">security
+                    </a>
+                </li>
+                
+            </ul>
+        </footer>
+        
+    </div>
+    <nav id="article-nav">
+    
+    
+    <a href="/post/welcome/" id="article-nav-older" class="article-nav-link-wrap">
+        <div class="article-nav-title">Welcome!&nbsp;<span>&gt;</span></div>
+    </a>
+    
+</nav>
+</article>
+
+        
+    </section>
+    <footer id="footer">
+    <div class="outer">
+        <div id="footer-info" class="inner">
+            &copy; 2017 Line Of Trust&nbsp;
+            Powered by <a href="https://gohugo.io" target="_blank">Hugo</a> with theme <a href="https://github.com/carsonip/hugo-theme-minos">Minos</a>
+        </div>
+    </div>
+    
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/tomorrow-night.min.css" integrity="sha256-2wL88NKUqvJi/ExflDzkzUumjUM73mcK2gBvBBeLvTk=" crossorigin="anonymous" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js" integrity="sha256-KbfTjB0WZ8vvXngdpJGY3Yp3xKk+tttbqClO11anCIU=" crossorigin="anonymous"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+    
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css" integrity="sha384-wITovz90syo1dJWVh32uuETPVEtGigN07tkttEqPv+uR2SE/mbQcG7ATL28aI9H0" crossorigin="anonymous">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.js" integrity="sha384-/y1Nn9+QQAipbNQWU65krzJralCnuOasHncUFXGkdwntGeSvQicrYkiUBwsgUqc1" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/contrib/auto-render.min.js" integrity="sha256-ExtbCSBuYA7kq1Pz362ibde9nnsHYPt6JxuxYeZbU+c=" crossorigin="anonymous"></script>
+        <script>renderMathInElement(document.body);</script>
+    
+    <script>
+        document.getElementById('main-nav-toggle').addEventListener('click', function () {
+            var header = document.getElementById('header');
+            if (header.classList.contains('mobile-on')) {
+                header.classList.remove('mobile-on');
+            } else {
+                header.classList.add('mobile-on');
+            }
+        });
+    </script>
+</footer>
+</div>
+</body>
+</html>
