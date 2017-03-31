@@ -74,7 +74,8 @@ In essence, he offers that (1) and (2) are not compelling enough reasons to main
  > <em>"When a user is on Facebook, why doesn't the URL bar just say 'Facebook,' with a small Facebook logo?  Would that not more clearly help the user understand the literal origin of the content?  Clearly, we would need a way for browsers to determine the locally known brand name and logo of all sites."</em>
 
 We believe that Campbell-Moore has raised a hugely important point, even if abolishing the URL bar may be infeasible:
->If we were to redesign the web browser UI from scratch, how would we do it?
+
+> <em>If we were to redesign the web browser UI from scratch, how would we do it?</em>
 
 It is our hope that a potential answer to this question would effectively thwart all the aforementioned UI shortcomings.
 
