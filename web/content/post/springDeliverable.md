@@ -161,3 +161,12 @@ TODO:
 # References
 TODO: Include all paper references and blog posts as links in the post's
 content. Remove this section once you're done!
+
+- [https://textslashplain.com/2017/01/14/the-line-of-death/](https://textslashplain.com/2017/01/14/the-line-of-death/)
+- [https://textslashplain.com/2017/01/16/certified-malice/](https://textslashplain.com/2017/01/16/certified-malice/)
+- [https://medium.com/@owencm/rethinking-url-bars-as-primary-browser-ui-e2118339d2c0](https://medium.com/@owencm/rethinking-url-bars-as-primary-browser-ui-e2118339d2c0)
+- [http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.136.5612&rep=rep1&type=pdf](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.136.5612&rep=rep1&type=pdf)
+- [https://cups.cs.cmu.edu/soups/2006/proceedings/p133_gideon.pdf](https://cups.cs.cmu.edu/soups/2006/proceedings/p133_gideon.pdf)
+- [http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.464.9463&rep=rep1&type=pdf](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.464.9463&rep=rep1&type=pdf)
+- [http://up.csail.mit.edu/projects/phishing/chi-security-toolbar.pdf](http://up.csail.mit.edu/projects/phishing/chi-security-toolbar.pdf)
+- [http://www.guanotronic.com/~serge/papers/chi07.pdf](http://www.guanotronic.com/~serge/papers/chi07.pdf)
