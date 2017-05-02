@@ -44,10 +44,35 @@ posting below. In particular, discuss the relevance of the Microsoft support
 picture-in-picture case study.
 
 # Introduction
-TODO: Describe a general introduction to the problem and why it needs attention/merits
-an SoK. Should be at least a couple paragraphs with sources. To make this
-easier, take a look at what we've written in previous posts and discussions on
-the slack channel.
+The state of web browser client UI today is best described as a disjoint medley of vulnerabilities, contradictory design principles, and implied security conditions.  Apart from the overarching design paradigm of a URL bar perched above page content with a tab-interface situated nearby, almost all aspects of contemporary web browsers vary from one vendor to the next.  There exist no universal security indicators, nor are the relative levels of security—think mixed HTTPS vs full HTTPS—ever explicitly presented to consumers of these products.  Warning prompts, pop-ups, and alerts are all handled differently.  Settings are difficult to find.  Extensive assortments of flags, optional settings, and advanced content featuers are tucked away far beneath the visible surface of the browser interface. 
+
+This industry-wide abuse of basic UI principles has resulted in a number of frightening security implications for everday users—issues that have largely gone unaddressed in the security community for the past decade.  Though major vendors like Google (developer of the Chromium project and the Chrome web browser) have taken steps to address some of the more sophisticated UI security issues plaguing web browsers, much more must be done to provide a sense of security for the vast majority of average Internet users who are most vulnerable.
+
+This post is the result of six weeks of brainstorming, reading, contemplating, presenting, and concerted discussion surrounding web browser UI security.  In it, we seek to provide a framework to systematize current and proposed approaches aimed at improving web browser client UI, venturing as far as offering a few suggestions of our own.
+
+Before we delve into that, however, some motivation is in order.
+
+## The Line of Death
+In January of this year, Eric Lawrence, writing for _text/plain_, published an [article](https://textslashplain.com/2017/01/14/the-line-of-death/) about an intriguing concept he coined the "Line of Death" that demarcates trusted from untrusted content in a web browser.  Consider the image below.
+
+![The Line of Death (text/plain)](https://textplain.files.wordpress.com/2017/01/image36.png?w=1440&h=584 "The Line of Death")
+
+As you can see, the page, _www.example.com_, exercises full control over the content below the red dotted line—the "line of death."  Consequently, as a user, you should not trust anything below this line that appears to be imitating a legitimate browser function.  For example, consider a malicious page attempting to redirect you to a spyware site.  The page may generate a fake element that looks like a generic "alert" box, but since it appears below the line of death, the user should assume that it may be fake and thus refrain from clicking.  As one would imagine, this notion is problematic—_real_ alert boxes actually _do_ appear in the untrusted page content!  How are average users expected to differentiate between legitimate alerts hovering _above_ the browser window and fake alerts displayed _within_ the browser window?  Making matters worse, malicious developers can even deploy JQuery scripts that cause their fake alert boxes to mimic the UI functionality of legitimate boxes—click and drag, "cancel," etc.  This mimicry is not limited to alert boxes; page elements such as download prompts, microphone/camera permission prompts, and plugin prompts are all vulnerable to imitation.  
+
+We can extend this basic line of death example even further by imaging a scenario in which the _entire trusted UI_ —tab bar, URL bar, bookmarks, HTTPS status—are spoofed within the untrusted content area.  _But that would be so obvious_, you exclaim!  Well, as we shall see, this so-called "picture-in-picture" attack is most potent when the user enters full-screen mode, wherein the trusted UI portion disappears from view to provide the user with more screen space.  An unsuspecting user could _easily_ forget that a URL bar should not be present and simply trust the URL bar and security indicators that happen to be dispalyed in the spoofed UI.  For example, in the image below, the entire legitimate, trusted browser UI one would expect to see while visiting PayPal.com is spoofed and displayed _inside the untrusted content area_.
+
+![Picture-in-Picture Attack (text/plain)](https://textplain.files.wordpress.com/2017/01/image40.png?w=1516&h=982 "Picture-in-Picture")
+
+## Certified Malice
+In a [follow-up piece](https://textslashplain.com/2017/01/16/certified-malice/) to _Line of Death_ published only two days following the original article, Eric Lawrence presented another, more insidious browser UI weakness:  malicious websites can just as easily acquire HTTPS certificates as legitimate websites.  This so-called "certified malice" renders the identification of illegitimate spoofing sites nearly impossible.  In this threat model, phishing sites attempting to masquerade as legitimate sites "secure" their pages with HTTPS certificates, leading users— _generations of whom have been trained to trust the green lock_ —to believe the malicious site is "good."  (We cannot help but point out the obvious irony:  HTTPS certificate proliferation helps the bad guys, too!)
+
+Clearly, this intricate web of UI, security, and social engineering issues necessitates attention to ensure average web browsers do not go astray attempting to check email online.  The two articles referenced above were published _less than four months ago_ and represent the _only_ contemporary inquiries into web browser UI problems.  In fact, it seems that most serious academic work in this area ceased about ten years ago.  This abrupt end to the study of web phishing attacks could mean one of three things:
+
+1. Web phishing is a hard problem with few clear answers, therefore it's difficult to be published, hence the lack of published papers.
+2. No one cares about web phishing anymore.  It's not cool.
+3. The research community has been focusing on other pursuits in the past decade but would certainly investigate these issues if given a friendly reminder.
+
+We maintain a firm belief in option #3, and in the potential for future investigation and academic work.  This systematization and roadmap seeks to codify that belief.
 
 # Systematization
 ## Overview
