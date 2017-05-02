@@ -2,7 +2,12 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://lineoftrust.github.io/post/springdeliverable/</loc>
+    <loc>https://lineoftrust.github.io/</loc>
+    <lastmod>2017-05-02T14:40:06-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://lineoftrust.github.io/post/springDeliverable/</loc>
     <lastmod>2017-05-02T14:40:06-04:00</lastmod>
   </url>
   
@@ -14,59 +19,6 @@
   <url>
     <loc>https://lineoftrust.github.io/post/welcome/</loc>
     <lastmod>2017-03-15T13:51:23-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://lineoftrust.github.io/categories/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://lineoftrust.github.io/</loc>
-    <lastmod>2017-05-02T14:40:06-04:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://lineoftrust.github.io/tags/lineoftrust/</loc>
-    <lastmod>2017-03-30T22:51:23-04:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://lineoftrust.github.io/post/</loc>
-    <lastmod>2017-05-02T14:40:06-04:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://lineoftrust.github.io/categories/project-update/</loc>
-    <lastmod>2017-05-02T14:40:06-04:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://lineoftrust.github.io/tags/security/</loc>
-    <lastmod>2017-03-30T22:51:23-04:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://lineoftrust.github.io/tags/</loc>
-    <lastmod>2017-03-30T22:51:23-04:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://lineoftrust.github.io/tags/talk/</loc>
-    <lastmod>2017-03-30T22:51:23-04:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://lineoftrust.github.io/tags/user-interface/</loc>
-    <lastmod>2017-03-30T22:51:23-04:00</lastmod>
-    <priority>0</priority>
   </url>
   
 </urlset>

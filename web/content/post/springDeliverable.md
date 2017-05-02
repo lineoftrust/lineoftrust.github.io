@@ -96,6 +96,30 @@ methodology as described aboce.
 
 ## Paper 2
 
+## Operating System Framed in Case of Mistaken Identity: Measuring the success of web-based spoofing attacks on OS password-entry dialogs
+Today's desktop operating systems often use windows which provide scant evidence
+that a trusted path has been established when asking users to enter credentials
+([Bravo-Lillo, C., et
+al.](http://people.cs.georgetown.edu/~clay/classes/spring2013/papers/Operating_System_Framed_in_Case_of_Mistaken_Identity.pdf)).
+This paper attempts to quantify the success rate of web-based spoofing attacks
+on OS password-entry dialogs. There is a clear connection between this study and
+common Line of Death browser UI attacks, as many of them rely on emulating valid
+browser- or OS-level elements to trick users into clicking on links or entering
+sensitive credentials. The study validates the efficacy of web-based attacks that
+spoof OS windows and presents the challenges of a path forward to trust: "proving
+that a trusted path ritual will resist real-world attacks requires
+deploying the ritual into the hands of users who will
+be relying on it to do so. The failures of individual trusted path mechanisms
+suggest that the problem is unlikely to be addressed adequately
+by any single mechanism. Rather, future work may focus
+on rituals that combine mechanisms. For example, consider
+rituals in which users must first enter a shared attention sequence
+and then expect to see a visual shared secret." There remain significant
+usability concerns of any particular trusted path implemented, although it is
+clear from the study that is Line of Death attacks are highly successful and
+readily feasible on unsuspecting users. See our user study design considerations
+for further directions inspired by this study.
+
 ## GuarDroid (Trusted Path, Authentication)
 [GuarDroid](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.480.9704&rep=rep1&type=pdf) 
 is a system that protects Android user's passwords from untrusted Android apps.

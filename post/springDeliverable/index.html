@@ -9,7 +9,7 @@
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
 <meta property="og:locale" content="en_US" />
-<meta property="og:url" content="https://lineoftrust.github.io/post/springdeliverable/" />
+<meta property="og:url" content="https://lineoftrust.github.io/post/springDeliverable/" />
 
 
     <link href="" rel="alternate" type="application/rss+xml" title="Line Of Trust" />
@@ -30,7 +30,7 @@
     <meta name="keywords" content="">
     <meta name="author" content="">
 
-    <meta name="generator" content="Hugo 0.20.2" />
+    <meta name="generator" content="Hugo 0.17" />
 </head>
 
 
@@ -60,7 +60,7 @@
         </header>
         
         <div class="article-meta">
-            <a href="/post/springdeliverable/" class="article-date">
+            <a href="/post/springDeliverable/" class="article-date">
                 <time datetime='2017-05-02T14:40:06.000-04:00' itemprop="datePublished">2017-05-02</time>
             </a>
             
@@ -177,6 +177,31 @@ methodology as described aboce.</p>
 
 <h2 id="paper-2">Paper 2</h2>
 
+<h2 id="operating-system-framed-in-case-of-mistaken-identity-measuring-the-success-of-web-based-spoofing-attacks-on-os-password-entry-dialogs">Operating System Framed in Case of Mistaken Identity: Measuring the success of web-based spoofing attacks on OS password-entry dialogs</h2>
+
+<p>Today&rsquo;s desktop operating systems often use windows which provide scant evidence
+that a trusted path has been established when asking users to enter credentials
+(<a href="http://people.cs.georgetown.edu/~clay/classes/spring2013/papers/Operating_System_Framed_in_Case_of_Mistaken_Identity.pdf" target="_blank">Bravo-Lillo, C., et
+al.</a>).
+This paper attempts to quantify the success rate of web-based spoofing attacks
+on OS password-entry dialogs. There is a clear connection between this study and
+common Line of Death browser UI attacks, as many of them rely on emulating valid
+browser- or OS-level elements to trick users into clicking on links or entering
+sensitive credentials. The study validates the efficacy of web-based attacks that
+spoof OS windows and presents the challenges of a path forward to trust: &ldquo;proving
+that a trusted path ritual will resist real-world attacks requires
+deploying the ritual into the hands of users who will
+be relying on it to do so. The failures of individual trusted path mechanisms
+suggest that the problem is unlikely to be addressed adequately
+by any single mechanism. Rather, future work may focus
+on rituals that combine mechanisms. For example, consider
+rituals in which users must first enter a shared attention sequence
+and then expect to see a visual shared secret.&rdquo; There remain significant
+usability concerns of any particular trusted path implemented, although it is
+clear from the study that is Line of Death attacks are highly successful and
+readily feasible on unsuspecting users. See our user study design considerations
+for further directions inspired by this study.</p>
+
 <h2 id="guardroid-trusted-path-authentication">GuarDroid (Trusted Path, Authentication)</h2>
 
 <p><a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.480.9704&amp;rep=rep1&amp;type=pdf" target="_blank">GuarDroid</a>
@@ -279,6 +304,7 @@ content. Remove this section once you&rsquo;re done!</p>
 <li><a href="#overview">Overview</a></li>
 <li><a href="#paper-1">Paper 1</a></li>
 <li><a href="#paper-2">Paper 2</a></li>
+<li><a href="#operating-system-framed-in-case-of-mistaken-identity-measuring-the-success-of-web-based-spoofing-attacks-on-os-password-entry-dialogs">Operating System Framed in Case of Mistaken Identity: Measuring the success of web-based spoofing attacks on OS password-entry dialogs</a></li>
 <li><a href="#guardroid-trusted-path-authentication">GuarDroid (Trusted Path, Authentication)</a></li>
 <li><a href="#paper-n-etc">Paper N &hellip; etc</a></li>
 <li><a href="#conclusion-tie-in">Conclusion/Tie-In</a></li>
@@ -324,11 +350,6 @@ content. Remove this section once you&rsquo;re done!</p>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js" integrity="sha256-KbfTjB0WZ8vvXngdpJGY3Yp3xKk+tttbqClO11anCIU=" crossorigin="anonymous"></script>
     <script>hljs.initHighlightingOnLoad();</script>
 
-    
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css" integrity="sha384-wITovz90syo1dJWVh32uuETPVEtGigN07tkttEqPv+uR2SE/mbQcG7ATL28aI9H0" crossorigin="anonymous">
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.js" integrity="sha384-/y1Nn9+QQAipbNQWU65krzJralCnuOasHncUFXGkdwntGeSvQicrYkiUBwsgUqc1" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/contrib/auto-render.min.js" integrity="sha256-ExtbCSBuYA7kq1Pz362ibde9nnsHYPt6JxuxYeZbU+c=" crossorigin="anonymous"></script>
-        <script>renderMathInElement(document.body);</script>
     
     <script>
         document.getElementById('main-nav-toggle').addEventListener('click', function () {
