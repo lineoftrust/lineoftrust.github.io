@@ -9,7 +9,7 @@
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
 <meta property="og:locale" content="en_US" />
-<meta property="og:url" content="https://lineoftrust.github.io/post/springdeliverable/" />
+<meta property="og:url" content="https://lineoftrust.github.io/post/springDeliverable/" />
 
 
     <link href="" rel="alternate" type="application/rss+xml" title="Line Of Trust" />
@@ -30,7 +30,7 @@
     <meta name="keywords" content="">
     <meta name="author" content="">
 
-    <meta name="generator" content="Hugo 0.20.2" />
+    <meta name="generator" content="Hugo 0.17" />
 </head>
 
 
@@ -60,7 +60,7 @@
         </header>
         
         <div class="article-meta">
-            <a href="/post/springdeliverable/" class="article-date">
+            <a href="/post/springDeliverable/" class="article-date">
                 <time datetime='2017-05-02T14:40:06.000-04:00' itemprop="datePublished">2017-05-02</time>
             </a>
             
@@ -177,6 +177,30 @@ methodology as described aboce.</p>
 
 <h2 id="paper-2">Paper 2</h2>
 
+<h2 id="guardroid-trusted-path-authentication">GuarDroid (Trusted Path, Authentication)</h2>
+
+<p><a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.480.9704&amp;rep=rep1&amp;type=pdf" target="_blank">GuarDroid</a>
+is a system that protects Android user&rsquo;s passwords from untrusted Android apps.
+It addresses the problem of establishing a trusted path between the user and
+the service that leverages the smartphone operating system as a trusted computing base.
+In relation to web browser UI privacy and security, GuarDroid presents a means
+to &ldquo;invert&rdquo; the relationship of user authentication to web sites by keeping the Android
+operating system accountable for verifying itself to the user; the user is not
+intended to trust sensitive input forms that are not protected by GuarDroid&rsquo;s
+application overhead, and only to trust GuarDroid&rsquo;s input when presented with
+the secret passphrase set prior to the smartphone&rsquo;s system image configuration.
+While GuarDroid is designed to leverage security guarantees for untrusted
+Android applications and their form data submission to web servers, the
+applicability of GuarDroid to a web browser UI (perhaps executed through a
+trusted extension or core browser feature) is analogous to the scope of the Line
+of Death attacks we consider. The most significant deterrent to using
+GuarDroid&rsquo;s trusted path is the usability need for the secret passphrase to be
+a human-readable phrase (i.e., low entropy for a guessing adversary) rather than
+utilizing random base 64 characters as the secret for verification. The
+advantages of implementing a trusted path, however, are quite effective and
+serve as a model of a solution to picture-in-picture attacks from the trusted
+base of the browser.</p>
+
 <h2 id="paper-n-etc">Paper N &hellip; etc</h2>
 
 <h2 id="conclusion-tie-in">Conclusion/Tie-In</h2>
@@ -235,6 +259,7 @@ content. Remove this section once you&rsquo;re done!</p>
 <li><a href="#overview">Overview</a></li>
 <li><a href="#paper-1">Paper 1</a></li>
 <li><a href="#paper-2">Paper 2</a></li>
+<li><a href="#guardroid-trusted-path-authentication">GuarDroid (Trusted Path, Authentication)</a></li>
 <li><a href="#paper-n-etc">Paper N &hellip; etc</a></li>
 <li><a href="#conclusion-tie-in">Conclusion/Tie-In</a></li>
 </ul></li>
@@ -276,11 +301,6 @@ content. Remove this section once you&rsquo;re done!</p>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js" integrity="sha256-KbfTjB0WZ8vvXngdpJGY3Yp3xKk+tttbqClO11anCIU=" crossorigin="anonymous"></script>
     <script>hljs.initHighlightingOnLoad();</script>
 
-    
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css" integrity="sha384-wITovz90syo1dJWVh32uuETPVEtGigN07tkttEqPv+uR2SE/mbQcG7ATL28aI9H0" crossorigin="anonymous">
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.js" integrity="sha384-/y1Nn9+QQAipbNQWU65krzJralCnuOasHncUFXGkdwntGeSvQicrYkiUBwsgUqc1" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/contrib/auto-render.min.js" integrity="sha256-ExtbCSBuYA7kq1Pz362ibde9nnsHYPt6JxuxYeZbU+c=" crossorigin="anonymous"></script>
-        <script>renderMathInElement(document.body);</script>
     
     <script>
         document.getElementById('main-nav-toggle').addEventListener('click', function () {

@@ -96,6 +96,29 @@ methodology as described aboce.
 
 ## Paper 2
 
+## GuarDroid (Trusted Path, Authentication)
+[GuarDroid](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.480.9704&rep=rep1&type=pdf) 
+is a system that protects Android user's passwords from untrusted Android apps.
+It addresses the problem of establishing a trusted path between the user and
+the service that leverages the smartphone operating system as a trusted computing base. 
+In relation to web browser UI privacy and security, GuarDroid presents a means
+to "invert" the relationship of user authentication to web sites by keeping the Android
+operating system accountable for verifying itself to the user; the user is not
+intended to trust sensitive input forms that are not protected by GuarDroid's
+application overhead, and only to trust GuarDroid's input when presented with
+the secret passphrase set prior to the smartphone's system image configuration.
+While GuarDroid is designed to leverage security guarantees for untrusted
+Android applications and their form data submission to web servers, the
+applicability of GuarDroid to a web browser UI (perhaps executed through a
+trusted extension or core browser feature) is analogous to the scope of the Line
+of Death attacks we consider. The most significant deterrent to using
+GuarDroid's trusted path is the usability need for the secret passphrase to be
+a human-readable phrase (i.e., low entropy for a guessing adversary) rather than 
+utilizing random base 64 characters as the secret for verification. The
+advantages of implementing a trusted path, however, are quite effective and
+serve as a model of a solution to picture-in-picture attacks from the trusted
+base of the browser.
+
 ## Paper N ... etc
 
 ## Conclusion/Tie-In

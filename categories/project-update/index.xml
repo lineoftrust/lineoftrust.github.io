@@ -1,23 +1,181 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Project Update on Line Of Trust</title>
-    <link>https://lineoftrust.github.io/categories/project-update/</link>
-    <description>Recent content in Project Update on Line Of Trust</description>
+    <title>Line Of Trust</title>
+    <link>https://lineoftrust.github.io/categories/project-update/index.xml</link>
+    <description>Recent content on Line Of Trust</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 02 May 2017 14:40:06 -0400</lastBuildDate>
-    
-	<atom:link href="https://lineoftrust.github.io/categories/project-update/index.xml" rel="self" type="application/rss+xml" />
-    
+    <atom:link href="https://lineoftrust.github.io/categories/project-update/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Systematization and Project Roadmap</title>
-      <link>https://lineoftrust.github.io/post/springdeliverable/</link>
+      <link>https://lineoftrust.github.io/post/springDeliverable/</link>
       <pubDate>Tue, 02 May 2017 14:40:06 -0400</pubDate>
       
-      <guid>https://lineoftrust.github.io/post/springdeliverable/</guid>
-      <description>Spring Deliverable As part of the University of Virginia&amp;rsquo;s Spring 2017 graduate seminar on Transport Layer Security (TLS), our project team has continued to investigate modern issues surrounding usable privacy and security of web browsing. The Line of Trust project seeks to understand the security, privacy, and human-factors related to a class of phishing and picture-in-picture attacks known collectively as the Line of Death. Contextualizing relevant literature and systematically analyzing the underlying problems in the Line of Death space will contribute to a Systematization of Knowledge (SoK) paper, which we intend to augment with a thoughtful user study.</description>
+      <guid>https://lineoftrust.github.io/post/springDeliverable/</guid>
+      <description>
+
+&lt;h1 id=&#34;spring-deliverable&#34;&gt;Spring Deliverable&lt;/h1&gt;
+
+&lt;p&gt;As part of the &lt;a href=&#34;http://virginia.edu&#34; target=&#34;_blank&#34;&gt;University of Virginia&lt;/a&gt;&amp;rsquo;s Spring 2017 &lt;a href=&#34;https://tlseminar.github.io/&#34; target=&#34;_blank&#34;&gt;graduate seminar
+on Transport Layer Security (TLS)&lt;/a&gt;, our project
+team has continued to investigate modern issues surrounding usable privacy and
+security of web browsing.
+The Line of Trust project seeks to understand the security, privacy, and human-factors related to a class of phishing
+and picture-in-picture attacks known collectively as the &lt;a href=&#34;https://textslashplain.com/2017/01/14/the-line-of-death/&#34; target=&#34;_blank&#34;&gt;Line of Death&lt;/a&gt;.
+Contextualizing relevant literature and systematically analyzing the underlying
+problems in the Line of Death space will contribute to a Systematization of
+Knowledge (SoK) paper, which we intend to augment with a thoughtful user study.
+The goal of this blog post is to present the culmination of our work throughout the last
+six weeks of the semester and provide a roadmap for our team&amp;rsquo;s plans to move
+forward through the summer months.&lt;/p&gt;
+
+&lt;p&gt;TODO: Add anything else relevant to the project overview and this post&amp;rsquo;s
+overview here.&lt;/p&gt;
+
+&lt;h1 id=&#34;presentation&#34;&gt;Presentation&lt;/h1&gt;
+
+&lt;script async class=&#34;speakerdeck-embed&#34;
+data-id=&#34;710bc0557e1240d9a9d209d1ed14ddde&#34; data-ratio=&#34;1.33333333333333&#34;
+src=&#34;//speakerdeck.com/assets/embed.js&#34;&gt;&lt;/script&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://tlseminar.github.io/&#34; target=&#34;_blank&#34;&gt;TLSeminar&lt;/a&gt;&amp;rsquo;s mini-conference provided our team
+the opportunity to motivate and present our project work during the latter half
+of the semester. Our presentation (above) focused on describing the research
+problem through a case study of an elaborate picture-in-picture &lt;a href=&#34;https://www.tripwire.com/state-of-security/latest-security-news/tech-support-scam-uses-website-elements-spoof-microsoft-support-page/&#34; target=&#34;_blank&#34;&gt;Microsoft Support Webpage
+Scam&lt;/a&gt;
+reported in March 2017.&lt;/p&gt;
+
+&lt;p&gt;TODO: Talk about the presentation and its slides for a few paragraphs and relate it to what we are
+posting below. In particular, discuss the relevance of the Microsoft support
+picture-in-picture case study.&lt;/p&gt;
+
+&lt;h1 id=&#34;introduction&#34;&gt;Introduction&lt;/h1&gt;
+
+&lt;p&gt;The state of web browser client UI today is best described as a disjoint medley of vulnerabilities, contradictory design principles, and implied security conditions.  Apart from the overarching design paradigm of a URL bar perched above page content with a tab-interface situated nearby, almost all aspects of contemporary web browsers vary from one vendor to the next.  There exist no universal security indicators, nor are the relative levels of security—think mixed HTTPS vs full HTTPS—ever explicitly presented to consumers of these products.  Warning prompts, pop-ups, and alerts are all handled differently.  Settings are difficult to find.  Extensive assortments of flags, optional settings, and advanced content featuers are tucked away far beneath the visible surface of the browser interface.&lt;/p&gt;
+
+&lt;p&gt;This industry-wide abuse of basic UI principles has resulted in a number of frightening security implications for everday users—issues that have largely gone unaddressed in the security community for the past decade.  Though major vendors like Google (developer of the Chromium project and the Chrome web browser) have taken steps to address some of the more sophisticated UI security issues plaguing web browsers, much more must be done to provide a sense of security for the vast majority of average Internet users who are most vulnerable.&lt;/p&gt;
+
+&lt;p&gt;This post is the result of six weeks of brainstorming, reading, contemplating, presenting, and concerted discussion surrounding web browser UI security.  In it, we seek to provide a framework to systematize current and proposed approaches aimed at improving web browser client UI, venturing as far as offering a few suggestions of our own.&lt;/p&gt;
+
+&lt;p&gt;Before we delve into that, however, some motivation is in order.&lt;/p&gt;
+
+&lt;h2 id=&#34;the-line-of-death&#34;&gt;The Line of Death&lt;/h2&gt;
+
+&lt;p&gt;In January of this year, Eric Lawrence, writing for &lt;em&gt;text/plain&lt;/em&gt;, published an &lt;a href=&#34;https://textslashplain.com/2017/01/14/the-line-of-death/&#34; target=&#34;_blank&#34;&gt;article&lt;/a&gt; about an intriguing concept he coined the &amp;ldquo;Line of Death&amp;rdquo; that demarcates trusted from untrusted content in a web browser.  Consider the image below.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://textplain.files.wordpress.com/2017/01/image36.png?w=1440&amp;amp;h=584&#34; alt=&#34;The Line of Death (text/plain)&#34; title=&#34;The Line of Death&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;As you can see, the page, &lt;em&gt;www.example.com&lt;/em&gt;, exercises full control over the content below the red dotted line—the &amp;ldquo;line of death.&amp;rdquo;  Consequently, as a user, you should not trust anything below this line that appears to be imitating a legitimate browser function.  For example, consider a malicious page attempting to redirect you to a spyware site.  The page may generate a fake element that looks like a generic &amp;ldquo;alert&amp;rdquo; box, but since it appears below the line of death, the user should assume that it may be fake and thus refrain from clicking.  As one would imagine, this notion is problematic—&lt;em&gt;real&lt;/em&gt; alert boxes actually &lt;em&gt;do&lt;/em&gt; appear in the untrusted page content!  How are average users expected to differentiate between legitimate alerts hovering &lt;em&gt;above&lt;/em&gt; the browser window and fake alerts displayed &lt;em&gt;within&lt;/em&gt; the browser window?  Making matters worse, malicious developers can even deploy JQuery scripts that cause their fake alert boxes to mimic the UI functionality of legitimate boxes—click and drag, &amp;ldquo;cancel,&amp;rdquo; etc.  This mimicry is not limited to alert boxes; page elements such as download prompts, microphone/camera permission prompts, and plugin prompts are all vulnerable to imitation.&lt;/p&gt;
+
+&lt;p&gt;We can extend this basic line of death example even further by imaging a scenario in which the &lt;em&gt;entire trusted UI&lt;/em&gt; —tab bar, URL bar, bookmarks, HTTPS status—are spoofed within the untrusted content area.  &lt;em&gt;But that would be so obvious&lt;/em&gt;, you exclaim!  Well, as we shall see, this so-called &amp;ldquo;picture-in-picture&amp;rdquo; attack is most potent when the user enters full-screen mode, wherein the trusted UI portion disappears from view to provide the user with more screen space.  An unsuspecting user could &lt;em&gt;easily&lt;/em&gt; forget that a URL bar should not be present and simply trust the URL bar and security indicators that happen to be dispalyed in the spoofed UI.  For example, in the image below, the entire legitimate, trusted browser UI one would expect to see while visiting PayPal.com is spoofed and displayed &lt;em&gt;inside the untrusted content area&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://textplain.files.wordpress.com/2017/01/image40.png?w=1516&amp;amp;h=982&#34; alt=&#34;Picture-in-Picture Attack (text/plain)&#34; title=&#34;Picture-in-Picture&#34; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;certified-malice&#34;&gt;Certified Malice&lt;/h2&gt;
+
+&lt;p&gt;In a &lt;a href=&#34;https://textslashplain.com/2017/01/16/certified-malice/&#34; target=&#34;_blank&#34;&gt;follow-up piece&lt;/a&gt; to &lt;em&gt;Line of Death&lt;/em&gt; published only two days following the original article, Eric Lawrence presented another, more insidious browser UI weakness:  malicious websites can just as easily acquire HTTPS certificates as legitimate websites.  This so-called &amp;ldquo;certified malice&amp;rdquo; renders the identification of illegitimate spoofing sites nearly impossible.  In this threat model, phishing sites attempting to masquerade as legitimate sites &amp;ldquo;secure&amp;rdquo; their pages with HTTPS certificates, leading users— &lt;em&gt;generations of whom have been trained to trust the green lock&lt;/em&gt; —to believe the malicious site is &amp;ldquo;good.&amp;rdquo;  (We cannot help but point out the obvious irony:  HTTPS certificate proliferation helps the bad guys, too!)&lt;/p&gt;
+
+&lt;p&gt;Clearly, this intricate web of UI, security, and social engineering issues necessitates attention to ensure average web browsers do not go astray attempting to check email online.  The two articles referenced above were published &lt;em&gt;less than four months ago&lt;/em&gt; and represent the &lt;em&gt;only&lt;/em&gt; contemporary inquiries into web browser UI problems.  In fact, it seems that most serious academic work in this area ceased about ten years ago.  This abrupt end to the study of web phishing attacks could mean one of three things:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Web phishing is a hard problem with few clear answers, therefore it&amp;rsquo;s difficult to be published, hence the lack of published papers.&lt;/li&gt;
+&lt;li&gt;No one cares about web phishing anymore.  It&amp;rsquo;s not cool.&lt;/li&gt;
+&lt;li&gt;The research community has been focusing on other pursuits in the past decade but would certainly investigate these issues if given a friendly reminder.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;We maintain a firm belief in option #3, and in the potential for future investigation and academic work.  This systematization and roadmap seeks to codify that belief.&lt;/p&gt;
+
+&lt;h1 id=&#34;systematization&#34;&gt;Systematization&lt;/h1&gt;
+
+&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;
+
+&lt;p&gt;TODO: Describe the general approach to our systematization (talk about the 6 questions
+Bill came up with and why we choose them for our analysis). A couple paragraphs
+in total should suffice. Just take the six questions below and justify/summarize
+them with a few sentences each.&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;What problem(s) does the resource address?&lt;/li&gt;
+&lt;li&gt;How does the problem relate to web browser UI?  If so, how?&lt;/li&gt;
+&lt;li&gt;What solution(s) is proposed?&lt;/li&gt;
+&lt;li&gt;Are the solutions relevant to web browser UI? If so, how?&lt;/li&gt;
+&lt;li&gt;What are the pros and cons of the solutions with respect to security,
+usability, and ease of adoption?&lt;/li&gt;
+&lt;li&gt;[only if viable] Based on the resource, how would you suggest proceeding with
+the implementation of the solution?&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&#34;paper-1&#34;&gt;Paper 1&lt;/h2&gt;
+
+&lt;p&gt;TODO: Perform the systematization analysis on each paper you have read using our
+methodology as described aboce.&lt;/p&gt;
+
+&lt;h2 id=&#34;paper-2&#34;&gt;Paper 2&lt;/h2&gt;
+
+&lt;h2 id=&#34;guardroid-trusted-path-authentication&#34;&gt;GuarDroid (Trusted Path, Authentication)&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.480.9704&amp;amp;rep=rep1&amp;amp;type=pdf&#34; target=&#34;_blank&#34;&gt;GuarDroid&lt;/a&gt;
+is a system that protects Android user&amp;rsquo;s passwords from untrusted Android apps.
+It addresses the problem of establishing a trusted path between the user and
+the service that leverages the smartphone operating system as a trusted computing base.
+In relation to web browser UI privacy and security, GuarDroid presents a means
+to &amp;ldquo;invert&amp;rdquo; the relationship of user authentication to web sites by keeping the Android
+operating system accountable for verifying itself to the user; the user is not
+intended to trust sensitive input forms that are not protected by GuarDroid&amp;rsquo;s
+application overhead, and only to trust GuarDroid&amp;rsquo;s input when presented with
+the secret passphrase set prior to the smartphone&amp;rsquo;s system image configuration.
+While GuarDroid is designed to leverage security guarantees for untrusted
+Android applications and their form data submission to web servers, the
+applicability of GuarDroid to a web browser UI (perhaps executed through a
+trusted extension or core browser feature) is analogous to the scope of the Line
+of Death attacks we consider. The most significant deterrent to using
+GuarDroid&amp;rsquo;s trusted path is the usability need for the secret passphrase to be
+a human-readable phrase (i.e., low entropy for a guessing adversary) rather than
+utilizing random base 64 characters as the secret for verification. The
+advantages of implementing a trusted path, however, are quite effective and
+serve as a model of a solution to picture-in-picture attacks from the trusted
+base of the browser.&lt;/p&gt;
+
+&lt;h2 id=&#34;paper-n-etc&#34;&gt;Paper N &amp;hellip; etc&lt;/h2&gt;
+
+&lt;h2 id=&#34;conclusion-tie-in&#34;&gt;Conclusion/Tie-In&lt;/h2&gt;
+
+&lt;p&gt;TODO: Relate the systematizations and discuss their purpose in our target of
+motivating the need for research in the Line of Death class of attacks.&lt;/p&gt;
+
+&lt;h1 id=&#34;deliverable-conclusion-and-project-roadmap&#34;&gt;Deliverable Conclusion and Project Roadmap&lt;/h1&gt;
+
+&lt;p&gt;In this blog post, we first motivated and described our semester&amp;rsquo;s efforts
+towards the Line of Trust project, using our class presentation slides and a
+&lt;a href=&#34;https://www.tripwire.com/state-of-security/latest-security-news/tech-support-scam-uses-website-elements-spoof-microsoft-support-page/&#34; target=&#34;_blank&#34;&gt;compelling case
+study&lt;/a&gt;.
+Secondly, we detailed and evaluated our methodology for systematizing research
+literature and community blog posts of significance to
+ the Line of Death class of attacks.
+Thirdly, we coalesced and analyzed a variety of literature according to our
+systematization techniques, and constructed general relationships between the class of
+problems uncovered in our literature systematization.&lt;/p&gt;
+
+&lt;p&gt;As the semester is coming to an end, our plans for the future of the project
+are as follows:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;We intend to continue work on the Line of Trust project during the summer
+months, with the goal of submitting a qualitative Systematization of Knowledge
+research paper to a conference in the fall term.
+TODO:&lt;/li&gt;
+&lt;li&gt;Discuss our goals in designing and carrying out a thoughtful user study&lt;/li&gt;
+&lt;li&gt;Discuss our goals in polishing/refining our systematization techniques&lt;/li&gt;
+&lt;li&gt;Discuss other ideas/routes/directions for the SoK that we want to consider&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;references&#34;&gt;References&lt;/h1&gt;
+
+&lt;p&gt;TODO: Include all paper references and blog posts as links in the post&amp;rsquo;s
+content. Remove this section once you&amp;rsquo;re done!&lt;/p&gt;
+</description>
     </item>
     
     <item>
@@ -26,7 +184,117 @@
       <pubDate>Thu, 30 Mar 2017 22:51:23 -0400</pubDate>
       
       <guid>https://lineoftrust.github.io/post/update_01/</guid>
-      <description>Status Update - Week 2 Motivation &amp;amp; Goals User interfaces are vitally important components of overall security, bridging the gap that exists between system designers, security experts, and the end users for whom the systems are being designed. In particular, the user interfaces of web browsers prove vitally important to security given the sensitive nature of content provided by users&amp;mdash;information spanning from banking to healthcare and everything in between.</description>
+      <description>
+
+&lt;h2 id=&#34;status-update-week-2&#34;&gt;Status Update - Week 2&lt;/h2&gt;
+
+&lt;h3 id=&#34;motivation-goals&#34;&gt;Motivation &amp;amp; Goals&lt;/h3&gt;
+
+&lt;p&gt;User interfaces are vitally important components of overall security, bridging the gap that exists between system designers, security experts, and the end users for whom the systems are being designed.  In particular, the user interfaces of &lt;strong&gt;web browsers&lt;/strong&gt; prove vitally important to security given the sensitive nature of content provided by users&amp;mdash;information spanning from banking to healthcare and everything in between.&lt;/p&gt;
+
+&lt;p&gt;Claude Shannon, widely regarded as the &amp;ldquo;father of the information age,&amp;rdquo; aptly summarized Kerchoff&amp;rsquo;s Principle of security through open design:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;&amp;ldquo;The enemy knows the system.&amp;rdquo;&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;When applied to browser UI, it is our belief that this principle necessitates the UI be designed in such a fashion that imitation attacks&amp;mdash;one website masquerading as another&amp;mdash;must never be allowed to compromise or otherwise complicate user security.&lt;/p&gt;
+
+&lt;p&gt;Our preliminary literature review has uncovered a myriad of shortcomings in the user interfaces of web browsers, and we have concluded that these shortcomings generally fall into two distinct categories:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Inability to easily discern between trusted and untrusted content&lt;/li&gt;
+&lt;li&gt;Inability to easily validate website identities&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;During our review, we were quite surprised to discover an apparent dearth of academic literature specifically addressing web browser UI.  Instead, much of the existing discussion is relegated to blog posts, security articles, and developer forums.   We believe that the area of web browser UI poses a series of compelling questions deserving of dedicated analysis and research.  To this end, we seek to coalesce, assess, and expand upon existing knowledge in this domain in order to effectively systematize knowledge for the benefit of future research work.  It is our hope that this systematization of knowledge will shed light on unsolved challenges and provide a framework of prioritization that can guide researchers (and perhaps even ourselves) in improving security via better user interfaces in future work.&lt;/p&gt;
+
+&lt;h3 id=&#34;the-state-of-browser-ui-problematic&#34;&gt;The State of Browser UI:  Problematic&lt;/h3&gt;
+
+&lt;h4 id=&#34;1-the-line-of-death&#34;&gt;1)  The Line of Death&lt;/h4&gt;
+
+&lt;p&gt;The &lt;a href=&#34;https://textslashplain.com/2017/01/14/the-line-of-death/&#34; target=&#34;_blank&#34;&gt;Line of Death (LoD)&lt;/a&gt; is a class of web browser attacks that target the very pixels of a browser UI on a given webpage, especially with regards to the (presumably) browser-controlled portion of the UI above
+webpage content.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://lineoftrust.github.io/images/lod.png&#34; alt=&#34;&#34; /&gt;
+&lt;center&gt;The Line of Death. &lt;em&gt;&lt;a href=&#34;https://textslashplain.com/2017/01/14/the-line-of-death/&#34; target=&#34;_blank&#34;&gt;Image credit&lt;/a&gt;&lt;/em&gt;&lt;/center&gt;&lt;/p&gt;
+
+&lt;p&gt;LoD attacks span the spectrum from manipulating URL names and tabs to spoofing new browser windows within the webpage&amp;rsquo;s content area:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://lineoftrust.github.io/images/zone4.png&#34; alt=&#34;&#34; /&gt;
+&lt;center&gt;Webpage controlled content. &lt;em&gt;&lt;a href=&#34;https://textslashplain.com/2017/01/14/the-line-of-death/&#34; target=&#34;_blank&#34;&gt;Image credit&lt;/a&gt;&lt;/em&gt;&lt;/center&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://textslashplain.com/2017/01/16/certified-malice/&#34; target=&#34;_blank&#34;&gt;Certified Malice&lt;/a&gt; is a phishing attack that deceives users into trusting a page that looks nearly identical to the real site, including TLS certificates with realistic naming schemes.  This threat becomes even more potent if combined with URL pixel manipulation.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://lineoftrust.github.io/images/prompt.png&#34; alt=&#34;&#34; /&gt;
+&lt;center&gt;Spoofed OS prompt in browser. &lt;em&gt;&lt;a href=&#34;https://malwaretips.com/blogs/wp-content/uploads/2015/02/adobe-flash-palyer-outdated-virus.jpg&#34; target=&#34;_blank&#34;&gt;Image credit&lt;/a&gt;&lt;/em&gt;&lt;/center&gt;&lt;/p&gt;
+
+&lt;p&gt;LoD attacks encompass more than just browser-object and URL spoofing attacks.  Some attacks attempt to erode users&amp;rsquo; abilities to discern legitimate OS prompts from spoofed prompts displayed in the browser, often designed to scare users into downloading or updating software.  Advanced JavaScript and HTML5 features have effectively blurred the line between browser UI and dynamically generated (and hence untrusted) page content.&lt;/p&gt;
+
+&lt;p&gt;Given the broad range of LoD-inspired attacks that have surfaced in the past year, the &lt;a href=&#34;https://lineoftrust.github.io/&#34;&gt;Line of Trust&lt;/a&gt; project seeks to generate potential solutions that improve the level of security a browser provides when trusted UI pixels and browser notifications are compromised or forged.&lt;/p&gt;
+
+&lt;h4 id=&#34;2-website-identity-validation-and-verification&#34;&gt;2)  Website Identity Validation and Verification&lt;/h4&gt;
+
+&lt;p&gt;In September of 2016, Googler Owen Campbell-Moore posted a series of thoughts on browser UI titled &lt;a href=&#34;https://medium.com/@owencm/rethinking-url-bars-as-primary-browser-ui-e2118339d2c0&#34; target=&#34;_blank&#34;&gt;&amp;ldquo;Rethinking URL bars as primary browser UI.&amp;rdquo; &lt;/a&gt;   After consulting the Google Chrome team, he came to the contentious conclusion that the URL bar may be an anachronism in the reality of today&amp;rsquo;s Web, kept alive for the historical reason of &amp;ldquo;we&amp;rsquo;ve always done it that way.&amp;rdquo;  He specifically identified three primary reasons why UI designers have retained the URL bar:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;So users understand who they&amp;rsquo;re talking to&lt;/li&gt;
+&lt;li&gt;So users can know where on a site they are, and navigate by modifying the URL&lt;/li&gt;
+&lt;li&gt;So users can share links to what they&amp;rsquo;re currently looking at&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Campbell-Moore notes that today&amp;rsquo;s URL &amp;ldquo;omnibar&amp;rdquo; is responsible for far too many aspects of the browser UI to be effective (site identity, location within the site, security status, geographic location indicator, pop-up control, plug-in status) and argues that these constraints should be satisfied via alternative methods.&lt;/p&gt;
+
+&lt;p&gt;In essence, he offers that (1) and (2) are not compelling enough reasons to maintain the URL bar.  In its place, he suggests establishing an &lt;em&gt;origin-to-local-brand-mapping system&lt;/em&gt;, managed by search engines (presumably Google), that would serve to validate the identities of a certain subset of popular websites, displaying trusted identity information where the complicated URL omnibar is presently situated.  (And, of course, this identity information would be unspoofable, much like how &amp;ldquo;www.facebook.com&amp;rdquo; belongs to Facebook and cannot be issued to anyone else.)&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;&amp;ldquo;When a user is on Facebook, why doesn&amp;rsquo;t the URL bar just say &amp;lsquo;Facebook,&amp;rsquo; with a small Facebook logo?  Would that not more clearly help the user understand the literal origin of the content?  Clearly, we would need a way for browsers to determine the locally known brand name and logo of all sites.&amp;rdquo;&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;We believe that Campbell-Moore has raised a hugely important point, even if abolishing the URL bar may be infeasible:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;If we were to redesign the web browser UI from scratch, how would we do it?&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;It is our hope that a potential answer to this question would effectively thwart all the aforementioned UI shortcomings.&lt;/p&gt;
+
+&lt;h3 id=&#34;moving-forward&#34;&gt;Moving Forward&lt;/h3&gt;
+
+&lt;p&gt;Given the shortcomings and opportunities for study identified above, we plan to investigate four areas in the realm of usable browser security: spoofing legitimate browser UI elements, picture-in-picture attacks, exact reproductions of websites, and full browser UI redesigns.&lt;/p&gt;
+
+&lt;p&gt;For each of these four areas, we will follow a specific system, defined below, for gathering and analyzing information.&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;First, we determine what past work has been done in that area, as well as relevant security problems.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Next, we examine old solutions to these early problems. These solutions patch and target specific types of attacks, and are very narrow in scope. Many of these solutions are therefore obsolete due to more recent changes in web usage, such as HTML5 and browser modifications. However, these new developments yield new problems within their respective areas.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;We devise various potential unbounded solutions to these problems and categorize them into three types:   UI solutions (which deal with user awareness), experimental techniques (solutions based on vision, NLP, and other cutting edge techniques), and infrastructure redesign (solutions that require more extensive change, potentially even beyond the browser).&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Stage 1 is underway and will soon transition to stage 2.  The target deliverable on April 28th is a quality SoK that will define the problem, provide our preliminary reasoning on the issues at stake, suggest some potential avenues to fix the problems, and conclude with open research questions.  We intend to carefully reason about underlying connections among the UI issues that may point toward a common &amp;ldquo;best&amp;rdquo; solution.&lt;/p&gt;
+
+&lt;h3 id=&#34;relevant-resources&#34;&gt;Relevant Resources&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://textslashplain.com/2017/01/14/the-line-of-death/&#34; target=&#34;_blank&#34;&gt;The Line of Death - Text/Plain&lt;/a&gt;  Details of spoofed browser prompts, untrusted and trusted information zones, and picture-in-picture attacks&lt;br /&gt;&lt;br /&gt;
+&lt;a href=&#34;https://medium.com/@owencm/rethinking-url-bars-as-primary-browser-ui-e2118339d2c0&#34; target=&#34;_blank&#34;&gt;Rethinking URL bars as primary browser UI&lt;/a&gt; Replace the browser URL bar with an &amp;ldquo;identity bar&amp;rdquo; managed by search engines, since &amp;ldquo;no one uses the URL bar anymore&amp;rdquo;&lt;br /&gt;&lt;br /&gt;
+&lt;a href=&#34;https://www.w3.org/2005/Security/usability-ws/papers/02-hp-petname/&#34; target=&#34;_blank&#34;&gt;PetNames&lt;/a&gt; Associate a catchphrase with trusted websites in order to quickly identify fraudulent copies of the websites (evident if the catchphrase is absent)&lt;br /&gt;&lt;br /&gt;
+&lt;a href=&#34;https://www.tripwire.com/state-of-security/latest-security-news/tech-support-scam-uses-website-elements-spoof-microsoft-support-page/&#34; target=&#34;_blank&#34;&gt;Microsoft Support Page - LoD Attack&lt;/a&gt; Very recent LoD attack on the Microsoft Support Page; takes advantage of fullscreen HTML5&lt;br /&gt;&lt;br /&gt;
+&lt;a href=&#34;https://books.google.com/books?id=xxAbEcNlIwwC&amp;amp;pg=PA499&amp;amp;lpg=PA499&amp;amp;dq=spoofed+browser+elements&amp;amp;source=bl&amp;amp;ots=JUoFxxxosB&amp;amp;sig=rVMyxVbg6eKAmRiiRJYBWL76bIY&amp;amp;hl=en&amp;amp;sa=X&amp;amp;ved=0ahUKEwjqwrLXo_jSAhXM7CYKHeSyBZcQ6AEIHDAA#v=onepage&amp;amp;q=spoofed%20browser%20elements&amp;amp;f=false&#34; target=&#34;_blank&#34;&gt;Verification Engine&lt;/a&gt; LoD defense mechanism c. 2006 that highlights the borders of trusted UI elements when the mouse hovers over them (could be mimicked with advanced JavaScript and HTML5 today)&lt;br /&gt;&lt;br /&gt;
+&lt;a href=&#34;https://crypto.stanford.edu/SpoofGuard/&#34; target=&#34;_blank&#34;&gt;SpoofGuard&lt;/a&gt;  Tactics to defend against fraudulent websites c. 2004; most of the techniques are outdated now&lt;br /&gt;&lt;br /&gt;
+&lt;a href=&#34;https://eprint.iacr.org/2004/155.pdf&#34; target=&#34;_blank&#34;&gt;TrustBar&lt;/a&gt; Suggests that &amp;ldquo;&amp;hellip;a realistic usability test should provide a reasonable level of introduction of any new mechanism, balancing this with the risk of causing users to be overly-aware of security.&amp;rdquo;&lt;/p&gt;
+
+&lt;h3 id=&#34;contributors&#34;&gt;Contributors&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Anant Kharkar, undergraduate student at the University of Virginia&lt;/li&gt;
+&lt;li&gt;Sam Havron, undergraduate student at the University of Virginia&lt;/li&gt;
+&lt;li&gt;Bill Young, graduate student at the University of Virginia&lt;/li&gt;
+&lt;li&gt;Joshua Holtzman, undergraduate student at the University of Virginia&lt;/li&gt;
+&lt;li&gt;Dave Evans, project advisor and computer science professor at the University of Virginia&lt;/li&gt;
+&lt;/ul&gt;
+</description>
     </item>
     
     <item>
@@ -35,10 +303,70 @@
       <pubDate>Wed, 15 Mar 2017 13:51:23 -0400</pubDate>
       
       <guid>https://lineoftrust.github.io/post/welcome/</guid>
-      <description>Introducing the Line of Trust (LOTr) Erasing the line of death for fun and pleasure
-Motivation The Line of Death (LoD) is a class of web browser attacks that target the very pixels of a browser UI on a given webpage, especially with regards to the (presumably) browser-controlled portion of the UI above webpage content.
-The Line of Death. Image credit
-LoD attacks span the spectrum from manipulating URL names and tabs to spoofing new browser windows within the webpage&amp;rsquo;s content area:</description>
+      <description>
+
+&lt;h2 id=&#34;introducing-the-line-of-trust-lotr&#34;&gt;Introducing the Line of Trust (LOTr)&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;Erasing the line of death for fun and pleasure&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;motivation&#34;&gt;Motivation&lt;/h3&gt;
+
+&lt;p&gt;The &lt;a href=&#34;https://textslashplain.com/2017/01/14/the-line-of-death/&#34; target=&#34;_blank&#34;&gt;Line of Death (LoD)&lt;/a&gt; is a class of web
+browser attacks that target the very pixels of a browser UI on a given webpage,
+especially with regards to the (presumably) browser-controlled portion of the UI above
+webpage content.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://lineoftrust.github.io/images/lod.png&#34; alt=&#34;&#34; /&gt;
+&lt;center&gt;The Line of Death. &lt;em&gt;&lt;a href=&#34;https://textslashplain.com/2017/01/14/the-line-of-death/&#34; target=&#34;_blank&#34;&gt;Image credit&lt;/a&gt;&lt;/em&gt;&lt;/center&gt;&lt;/p&gt;
+
+&lt;p&gt;LoD attacks span the spectrum from manipulating URL names and tabs to spoofing new browser windows within the
+webpage&amp;rsquo;s content area:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://lineoftrust.github.io/images/zone4.png&#34; alt=&#34;&#34; /&gt;
+&lt;center&gt;Webpage controlled content. &lt;em&gt;&lt;a href=&#34;https://textslashplain.com/2017/01/14/the-line-of-death/&#34; target=&#34;_blank&#34;&gt;Image credit&lt;/a&gt;&lt;/em&gt;&lt;/center&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://textslashplain.com/2017/01/16/certified-malice/&#34; target=&#34;_blank&#34;&gt;Certified Malice&lt;/a&gt; is a
+phishing attack that deceives users into trusting a page that looks nearly identical
+to the real site, including TLS certificates with realistic naming schemes.
+This threat becomes even more potent if combined with URL pixel manipulation.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://lineoftrust.github.io/images/prompt.png&#34; alt=&#34;&#34; /&gt;
+&lt;center&gt;Spoofed OS prompt in browser. &lt;em&gt;&lt;a href=&#34;https://malwaretips.com/blogs/wp-content/uploads/2015/02/adobe-flash-palyer-outdated-virus.jpg&#34; target=&#34;_blank&#34;&gt;Image credit&lt;/a&gt;&lt;/em&gt;&lt;/center&gt;&lt;/p&gt;
+
+&lt;p&gt;LoD attacks encompass more than just browser-object and URL spoofing attacks.  Some attacks
+attempt to erode users&amp;rsquo; abilities to discern legitimate OS prompts from spoofed prompts
+displayed in the browser, often designed to scare users into downloading or updating software.&lt;/p&gt;
+
+&lt;p&gt;Given the broad range of LoD-inspired attacks that have surfaced in the past
+year, the &lt;a href=&#34;https://lineoftrust.github.io/&#34;&gt;Line of Trust&lt;/a&gt; project seeks to improve the level of security a
+browser provides when trusted UI pixels and browser notifications are compromised or forged.&lt;/p&gt;
+
+&lt;h3 id=&#34;goals-for-line-of-trust&#34;&gt;Goals for Line of Trust&lt;/h3&gt;
+
+&lt;p&gt;Specifically, we are interested in developing baked-in browser warnings for content that is
+suspected to be a LoD attack. We will be using &lt;a href=&#34;https://chromium.org&#34; target=&#34;_blank&#34;&gt;Google
+Chromium&lt;/a&gt; to develop LOTr.&lt;/p&gt;
+
+&lt;p&gt;Our overarching goal is to reduce the feasibility of LoD attacks while providing
+increased transparency to the end-user. We are currently considering various computer
+vision techniques to build LOTr.&lt;/p&gt;
+
+&lt;h3 id=&#34;relevant-resources&#34;&gt;Relevant Resources&lt;/h3&gt;
+
+&lt;p&gt;&lt;em&gt;News, Blogs, &amp;amp; Forums&lt;/em&gt; &lt;br /&gt;
+&lt;a href=&#34;https://news.ycombinator.com/item?id=13400291&#34; target=&#34;_blank&#34;&gt;The Line of Death - Hacker News&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&#34;https://textslashplain.com/2017/01/14/the-line-of-death/&#34; target=&#34;_blank&#34;&gt;The Line of Death - Text/Plain&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;contributors&#34;&gt;Contributors&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Anant Kharkar, undergraduate student at the University of Virginia&lt;/li&gt;
+&lt;li&gt;Sam Havron, undergraduate student at the University of Virginia&lt;/li&gt;
+&lt;li&gt;Bill Young, graduate student at the University of Virginia&lt;/li&gt;
+&lt;li&gt;Joshua Holtzman, undergraduate student at the University of Virginia&lt;/li&gt;
+&lt;li&gt;Dave Evans, project advisor and computer science professor at the University of Virginia&lt;/li&gt;
+&lt;/ul&gt;
+</description>
     </item>
     
   </channel>
