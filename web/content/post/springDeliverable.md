@@ -48,7 +48,7 @@ The state of web browser client UI today is best described as a disjoint medley 
 
 This industry-wide abuse of basic UI principles has resulted in a number of frightening security implications for everday users—issues that have largely gone unaddressed in the security community for the past decade.  Though major vendors like Google (developer of the Chromium project and the Chrome web browser) have taken steps to address some of the more sophisticated UI security issues plaguing web browsers, much more must be done to provide a sense of security for the vast majority of average Internet users who are most vulnerable.
 
-This post is the result of six weeks of brainstorming, reading, contemplating, presenting, and concerted discussion surrounding web browser UI security.  In it, we seek to provide a framework to systematize current and proposed approaches aimed at improving web browser client UI, venturing as far as offering a few suggestions of our own.
+This post is the result of six weeks of brainstorming, reading, contemplating, presenting, and discussing web browser UI security.  In it, we seek to provide a framework to systematize current and proposed approaches aimed at improving web browser client UI, venturing as far as offering a few suggestions of our own.
 
 Before we delve into that, however, some motivation is in order.
 
@@ -76,19 +76,14 @@ We maintain a firm belief in option #3, and in the potential for future investig
 
 # Systematization
 ## Overview
-TODO: Describe the general approach to our systematization (talk about the 6 questions
-Bill came up with and why we choose them for our analysis). A couple paragraphs
-in total should suffice. Just take the six questions below and justify/summarize
-them with a few sentences each.
+Our systematization follows a uniform process that enables us to categorize, assess, and ultimately rate the potential usefulness of various research works and related resources.  In it, we attempt to address the following issues:
 
-1. What problem(s) does the resource address?
-2. How does the problem relate to web browser UI?  If so, how?
-3. What solution(s) is proposed?
-4. Are the solutions relevant to web browser UI? If so, how?
-5. What are the pros and cons of the solutions with respect to security,
-   usability, and ease of adoption?
-6. [only if viable] Based on the resource, how would you suggest proceeding with
-   the implementation of the solution?
+1. *What problem(s) does the resource address?*  
+2. *Does the problem relate to web browser UI? If so, how?* What aspects of the problem are shared between the resource topic and web browser UI?
+3. *What solution(s) is proposed?*
+4. *Are the solutions relevant to web browser UI? If so, how?*  What aspects of the solution(s) could be applied to web browser UI?
+5. *What are the pros and cons of the solutions with respect to security, usability, and ease of adoption?*  Will people use it?  What security guarantees are implied?  How likely is it that users will actually interact with the solution mechanism?
+6. [if viable] *Based on the resource, how would you suggest proceeding with the implementation of the solution?*
 
 ## Paper 1
 TODO: Perform the systematization analysis on each paper you have read using our
