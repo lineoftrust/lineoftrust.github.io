@@ -143,6 +143,16 @@ are as follows:
 - We intend to continue work on the Line of Trust project during the summer
 months, with the goal of submitting a qualitative Systematization of Knowledge
 research paper to a conference in the fall term.
+
+## Design Considerations:  User Study
+
+Designing a thoughtful user study related to security is not a trivial undertaking.  As [Gaw et al.](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.136.5612&rep=rep1&type=pdf) and [Dourish et al.](http://www.dourish.com/publications/2004/PUC2004-security.pdf) argue, user practices related to security need to be understood, yet actually obtaining observational data about the nature of user practices is challenging, since security is rarely interacted with directly.
+ 
+Qualitative techniques such as interviews and surveys can be successful but have a unique array of limitations—namely, participants exercise heightened vigilance and caution and claim to take particular actions with respect to security that may otherwise be totally different outside the interview.  Thus, the issue of _unreliability_ becomes a limiting factor in the effectiveness of interviews and surveys.  Interestingly, [Whalen and Inkpen](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.464.9463&rep=rep1&type=pdf) note that in a lab study of web browser security, participants didn’t act to protect data and resources as if they were their own, hinting that motivation is another area of concern in hands-on study approaches.
+
+Lastly, the nature of conducting a study on security practices unavoidably introduces bias into the results, since the evaluator must somehow prime the participant to focus specifically on security, as [Wu et al.](http://up.csail.mit.edu/projects/phishing/chi-security-toolbar.pdf) note.  Thus, a good security study must make security a peripheral goal rather than a primary goal.
+
+
 TODO: 
 - Discuss our goals in designing and carrying out a thoughtful user study
 - Discuss our goals in polishing/refining our systematization techniques
