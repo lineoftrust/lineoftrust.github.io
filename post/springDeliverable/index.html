@@ -9,7 +9,7 @@
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
 <meta property="og:locale" content="en_US" />
-<meta property="og:url" content="https://lineoftrust.github.io/post/springDeliverable/" />
+<meta property="og:url" content="https://lineoftrust.github.io/post/springdeliverable/" />
 
 
     <link href="" rel="alternate" type="application/rss+xml" title="Line Of Trust" />
@@ -30,7 +30,7 @@
     <meta name="keywords" content="">
     <meta name="author" content="">
 
-    <meta name="generator" content="Hugo 0.17" />
+    <meta name="generator" content="Hugo 0.20.2" />
 </head>
 
 
@@ -60,7 +60,7 @@
         </header>
         
         <div class="article-meta">
-            <a href="/post/springDeliverable/" class="article-date">
+            <a href="/post/springdeliverable/" class="article-date">
                 <time datetime='2017-05-02T14:40:06.000-04:00' itemprop="datePublished">2017-05-02</time>
             </a>
             
@@ -120,7 +120,7 @@ picture-in-picture case study.</p>
 
 <p>This industry-wide abuse of basic UI principles has resulted in a number of frightening security implications for everday users—issues that have largely gone unaddressed in the security community for the past decade.  Though major vendors like Google (developer of the Chromium project and the Chrome web browser) have taken steps to address some of the more sophisticated UI security issues plaguing web browsers, much more must be done to provide a sense of security for the vast majority of average Internet users who are most vulnerable.</p>
 
-<p>This post is the result of six weeks of brainstorming, reading, contemplating, presenting, and concerted discussion surrounding web browser UI security.  In it, we seek to provide a framework to systematize current and proposed approaches aimed at improving web browser client UI, venturing as far as offering a few suggestions of our own.</p>
+<p>This post is the result of six weeks of brainstorming, reading, contemplating, presenting, and discussing web browser UI security.  In it, we seek to provide a framework to systematize current and proposed approaches aimed at improving web browser client UI, venturing as far as offering a few suggestions of our own.</p>
 
 <p>Before we delve into that, however, some motivation is in order.</p>
 
@@ -154,20 +154,15 @@ picture-in-picture case study.</p>
 
 <h2 id="overview">Overview</h2>
 
-<p>TODO: Describe the general approach to our systematization (talk about the 6 questions
-Bill came up with and why we choose them for our analysis). A couple paragraphs
-in total should suffice. Just take the six questions below and justify/summarize
-them with a few sentences each.</p>
+<p>Our systematization follows a uniform process that enables us to categorize, assess, and ultimately rate the potential usefulness of various research works and related resources.  In it, we attempt to address the following issues:</p>
 
 <ol>
-<li>What problem(s) does the resource address?</li>
-<li>How does the problem relate to web browser UI?  If so, how?</li>
-<li>What solution(s) is proposed?</li>
-<li>Are the solutions relevant to web browser UI? If so, how?</li>
-<li>What are the pros and cons of the solutions with respect to security,
-usability, and ease of adoption?</li>
-<li>[only if viable] Based on the resource, how would you suggest proceeding with
-the implementation of the solution?</li>
+<li><strong>What problem(s) does the resource address?</strong><br /></li>
+<li><strong>Does the problem relate to web browser UI? If so, how?</strong> What aspects of the problem are shared between the resource topic and web browser UI?</li>
+<li><strong>What solution(s) is proposed?</strong></li>
+<li><strong>Are the solutions relevant to web browser UI? If so, how?</strong>  What aspects of the solution(s) could be applied to web browser UI?</li>
+<li><strong>What are the pros and cons of the solutions with respect to security, usability, and ease of adoption?</strong>  Will people use it?  What security guarantees are implied?  How likely is it that users will actually interact with the solution mechanism?</li>
+<li>[if viable] <strong>Based on the resource, how would you suggest proceeding with the implementation of the solution?</strong></li>
 </ol>
 
 <h2 id="paper-1">Paper 1</h2>
@@ -350,6 +345,11 @@ content. Remove this section once you&rsquo;re done!</p>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js" integrity="sha256-KbfTjB0WZ8vvXngdpJGY3Yp3xKk+tttbqClO11anCIU=" crossorigin="anonymous"></script>
     <script>hljs.initHighlightingOnLoad();</script>
 
+    
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css" integrity="sha384-wITovz90syo1dJWVh32uuETPVEtGigN07tkttEqPv+uR2SE/mbQcG7ATL28aI9H0" crossorigin="anonymous">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.js" integrity="sha384-/y1Nn9+QQAipbNQWU65krzJralCnuOasHncUFXGkdwntGeSvQicrYkiUBwsgUqc1" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/contrib/auto-render.min.js" integrity="sha256-ExtbCSBuYA7kq1Pz362ibde9nnsHYPt6JxuxYeZbU+c=" crossorigin="anonymous"></script>
+        <script>renderMathInElement(document.body);</script>
     
     <script>
         document.getElementById('main-nav-toggle').addEventListener('click', function () {

@@ -78,12 +78,12 @@ We maintain a firm belief in option #3, and in the potential for future investig
 ## Overview
 Our systematization follows a uniform process that enables us to categorize, assess, and ultimately rate the potential usefulness of various research works and related resources.  In it, we attempt to address the following issues:
 
-1. *What problem(s) does the resource address?*  
-2. *Does the problem relate to web browser UI? If so, how?* What aspects of the problem are shared between the resource topic and web browser UI?
-3. *What solution(s) is proposed?*
-4. *Are the solutions relevant to web browser UI? If so, how?*  What aspects of the solution(s) could be applied to web browser UI?
-5. *What are the pros and cons of the solutions with respect to security, usability, and ease of adoption?*  Will people use it?  What security guarantees are implied?  How likely is it that users will actually interact with the solution mechanism?
-6. [if viable] *Based on the resource, how would you suggest proceeding with the implementation of the solution?*
+1. **What problem(s) does the resource address?**  
+2. **Does the problem relate to web browser UI? If so, how?** What aspects of the problem are shared between the resource topic and web browser UI?
+3. **What solution(s) is proposed?**
+4. **Are the solutions relevant to web browser UI? If so, how?**  What aspects of the solution(s) could be applied to web browser UI?
+5. **What are the pros and cons of the solutions with respect to security, usability, and ease of adoption?**  Will people use it?  What security guarantees are implied?  How likely is it that users will actually interact with the solution mechanism?
+6. [if viable] **Based on the resource, how would you suggest proceeding with the implementation of the solution?**
 
 ## Paper 1
 TODO: Perform the systematization analysis on each paper you have read using our

@@ -48,7 +48,7 @@ The state of web browser client UI today is best described as a disjoint medley 
 
 This industry-wide abuse of basic UI principles has resulted in a number of frightening security implications for everday users—issues that have largely gone unaddressed in the security community for the past decade.  Though major vendors like Google (developer of the Chromium project and the Chrome web browser) have taken steps to address some of the more sophisticated UI security issues plaguing web browsers, much more must be done to provide a sense of security for the vast majority of average Internet users who are most vulnerable.
 
-This post is the result of six weeks of brainstorming, reading, contemplating, presenting, and concerted discussion surrounding web browser UI security.  In it, we seek to provide a framework to systematize current and proposed approaches aimed at improving web browser client UI, venturing as far as offering a few suggestions of our own.
+This post is the result of six weeks of brainstorming, reading, contemplating, presenting, and discussing web browser UI security.  In it, we seek to provide a framework to systematize current and proposed approaches aimed at improving web browser client UI, venturing as far as offering a few suggestions of our own.
 
 Before we delve into that, however, some motivation is in order.
 
@@ -76,25 +76,44 @@ We maintain a firm belief in option #3, and in the potential for future investig
 
 # Systematization
 ## Overview
-TODO: Describe the general approach to our systematization (talk about the 6 questions
-Bill came up with and why we choose them for our analysis). A couple paragraphs
-in total should suffice. Just take the six questions below and justify/summarize
-them with a few sentences each.
+Our systematization follows a uniform process that enables us to categorize, assess, and ultimately rate the potential usefulness of various research works and related resources.  In it, we attempt to address the following issues:
 
-1. What problem(s) does the resource address?
-2. How does the problem relate to web browser UI?  If so, how?
-3. What solution(s) is proposed?
-4. Are the solutions relevant to web browser UI? If so, how?
-5. What are the pros and cons of the solutions with respect to security,
-   usability, and ease of adoption?
-6. [only if viable] Based on the resource, how would you suggest proceeding with
-   the implementation of the solution?
+1. *What problem(s) does the resource address?*  
+2. *Does the problem relate to web browser UI? If so, how?* What aspects of the problem are shared between the resource topic and web browser UI?
+3. *What solution(s) is proposed?*
+4. *Are the solutions relevant to web browser UI? If so, how?*  What aspects of the solution(s) could be applied to web browser UI?
+5. *What are the pros and cons of the solutions with respect to security, usability, and ease of adoption?*  Will people use it?  What security guarantees are implied?  How likely is it that users will actually interact with the solution mechanism?
+6. [if viable] *Based on the resource, how would you suggest proceeding with the implementation of the solution?*
 
 ## Paper 1
 TODO: Perform the systematization analysis on each paper you have read using our
 methodology as described aboce.
 
 ## Paper 2
+
+## Operating System Framed in Case of Mistaken Identity: Measuring the success of web-based spoofing attacks on OS password-entry dialogs
+Today's desktop operating systems often use windows which provide scant evidence
+that a trusted path has been established when asking users to enter credentials
+([Bravo-Lillo, C., et
+al.](http://people.cs.georgetown.edu/~clay/classes/spring2013/papers/Operating_System_Framed_in_Case_of_Mistaken_Identity.pdf)).
+This paper attempts to quantify the success rate of web-based spoofing attacks
+on OS password-entry dialogs. There is a clear connection between this study and
+common Line of Death browser UI attacks, as many of them rely on emulating valid
+browser- or OS-level elements to trick users into clicking on links or entering
+sensitive credentials. The study validates the efficacy of web-based attacks that
+spoof OS windows and presents the challenges of a path forward to trust: "proving
+that a trusted path ritual will resist real-world attacks requires
+deploying the ritual into the hands of users who will
+be relying on it to do so. The failures of individual trusted path mechanisms
+suggest that the problem is unlikely to be addressed adequately
+by any single mechanism. Rather, future work may focus
+on rituals that combine mechanisms. For example, consider
+rituals in which users must first enter a shared attention sequence
+and then expect to see a visual shared secret." There remain significant
+usability concerns of any particular trusted path implemented, although it is
+clear from the study that is Line of Death attacks are highly successful and
+readily feasible on unsuspecting users. See our user study design considerations
+for further directions inspired by this study.
 
 ## GuarDroid (Trusted Path, Authentication)
 [GuarDroid](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.480.9704&rep=rep1&type=pdf) 
@@ -161,3 +180,12 @@ TODO:
 # References
 TODO: Include all paper references and blog posts as links in the post's
 content. Remove this section once you're done!
+
+- [https://textslashplain.com/2017/01/14/the-line-of-death/](https://textslashplain.com/2017/01/14/the-line-of-death/)
+- [https://textslashplain.com/2017/01/16/certified-malice/](https://textslashplain.com/2017/01/16/certified-malice/)
+- [https://medium.com/@owencm/rethinking-url-bars-as-primary-browser-ui-e2118339d2c0](https://medium.com/@owencm/rethinking-url-bars-as-primary-browser-ui-e2118339d2c0)
+- [http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.136.5612&rep=rep1&type=pdf](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.136.5612&rep=rep1&type=pdf)
+- [https://cups.cs.cmu.edu/soups/2006/proceedings/p133_gideon.pdf](https://cups.cs.cmu.edu/soups/2006/proceedings/p133_gideon.pdf)
+- [http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.464.9463&rep=rep1&type=pdf](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.464.9463&rep=rep1&type=pdf)
+- [http://up.csail.mit.edu/projects/phishing/chi-security-toolbar.pdf](http://up.csail.mit.edu/projects/phishing/chi-security-toolbar.pdf)
+- [http://www.guanotronic.com/~serge/papers/chi07.pdf](http://www.guanotronic.com/~serge/papers/chi07.pdf)
