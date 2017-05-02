@@ -10,7 +10,7 @@
     <atom:link href="https://lineoftrust.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>Systemization and Project Roadmap</title>
+      <title>Systematization and Project Roadmap</title>
       <link>https://lineoftrust.github.io/post/springDeliverable/</link>
       <pubDate>Tue, 02 May 2017 14:40:06 -0400</pubDate>
       
@@ -25,7 +25,7 @@ team has continued to investigate modern issues surrounding usable privacy and
 security of web browsing.
 The Line of Trust project seeks to understand the security, privacy, and human-factors related to a class of phishing and picture-in-picture attacks known collectively as the &lt;a href=&#34;https://textslashplain.com/2017/01/14/the-line-of-death/&#34; target=&#34;_blank&#34;&gt;Line of Death&lt;/a&gt;.
 Contextualizing relevant literature and systematically analyzing the underlying
-problems in the Line of Death space will contribute to a Systemization of
+problems in the Line of Death space will contribute to a Systematization of
 Knowledge (SoK) paper, which we intend to augment with a thoughtful user study.
 The goal of this blog post is to present the culmination of our work throughout the last
 six weeks of the semester and provide a roadmap for our team&amp;rsquo;s plans to move
@@ -33,9 +33,9 @@ forward through the summer months.&lt;/p&gt;
 
 &lt;h1 id=&#34;presentation&#34;&gt;Presentation&lt;/h1&gt;
 
-&lt;p&gt;&lt;a href=&#34;https://www.icloud.com/keynote/0E62QHO05J_Jo5M4Wx3Sm7w2g#Presentation&#34; target=&#34;_blank&#34;&gt;Link to the slides (please release as PDF instead, on Speakerdeck, so they can be
-viewed by
-anyone)&lt;/a&gt;.&lt;/p&gt;
+&lt;script async class=&#34;speakerdeck-embed&#34;
+data-id=&#34;710bc0557e1240d9a9d209d1ed14ddde&#34; data-ratio=&#34;1.33333333333333&#34;
+src=&#34;//speakerdeck.com/assets/embed.js&#34;&gt;&lt;/script&gt;
 
 &lt;p&gt;Talk about the presentation for a few paragraphs and relate it to what we are
 posting below. In particular, discuss the relevance of the Microsoft support
@@ -46,17 +46,28 @@ picture-in-picture case study.&lt;/p&gt;
 &lt;p&gt;Describe a general introduction to the problem and why it needs attention/merits
 an SoK. Should be at least a couple paragraphs with sources.&lt;/p&gt;
 
-&lt;h1 id=&#34;systemization&#34;&gt;Systemization&lt;/h1&gt;
+&lt;h1 id=&#34;systematization&#34;&gt;Systematization&lt;/h1&gt;
 
 &lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;
 
-&lt;p&gt;Describe the general approach to our systemization (talk about the 6 questions
+&lt;p&gt;Describe the general approach to our systematization (talk about the 6 questions
 Bill came up with and why we choose them for our analysis). A couple paragraphs
 in total should suffice.&lt;/p&gt;
 
+&lt;ol&gt;
+&lt;li&gt;What problem(s) does the resource address?&lt;/li&gt;
+&lt;li&gt;How does the problem relate to web browser UI?  If so, how?&lt;/li&gt;
+&lt;li&gt;What solution(s) is proposed?&lt;/li&gt;
+&lt;li&gt;Are the solutions relevant to web browser UI? If so, how?&lt;/li&gt;
+&lt;li&gt;What are the pros and cons of the solutions with respect to security,
+usability, and ease of adoption?&lt;/li&gt;
+&lt;li&gt;[only if viable] Based on the resource, how would you suggest proceeding with
+the implementation of the solution?&lt;/li&gt;
+&lt;/ol&gt;
+
 &lt;h2 id=&#34;paper-1&#34;&gt;Paper 1&lt;/h2&gt;
 
-&lt;p&gt;Perform the systemization analysis on each paper you have read.&lt;/p&gt;
+&lt;p&gt;Perform the systematization analysis on each paper you have read.&lt;/p&gt;
 
 &lt;h2 id=&#34;paper-2&#34;&gt;Paper 2&lt;/h2&gt;
 
@@ -64,14 +75,14 @@ in total should suffice.&lt;/p&gt;
 
 &lt;h2 id=&#34;conclusion-tie-in&#34;&gt;Conclusion/Tie-In&lt;/h2&gt;
 
-&lt;p&gt;Relate the paper&amp;rsquo;s systemizations.&lt;/p&gt;
+&lt;p&gt;Relate the paper&amp;rsquo;s systematizations.&lt;/p&gt;
 
 &lt;h1 id=&#34;project-roadmap&#34;&gt;Project Roadmap&lt;/h1&gt;
 
 &lt;ul&gt;
 &lt;li&gt;Discuss our summer plans and November deadline&lt;/li&gt;
 &lt;li&gt;Discuss our goals in designing and carrying out a thoughtful user study&lt;/li&gt;
-&lt;li&gt;Discuss our goals in polishing/refining our systemization techniques&lt;/li&gt;
+&lt;li&gt;Discuss our goals in polishing/refining our systematization techniques&lt;/li&gt;
 &lt;li&gt;Discuss other ideas/routes/directions for the SoK that we want to consider&lt;/li&gt;
 &lt;/ul&gt;
 
