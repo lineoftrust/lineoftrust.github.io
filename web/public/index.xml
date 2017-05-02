@@ -23,7 +23,8 @@
 on Transport Layer Security (TLS)&lt;/a&gt;, our project
 team has continued to investigate modern issues surrounding usable privacy and
 security of web browsing.
-The Line of Trust project seeks to understand the security, privacy, and human-factors related to a class of phishing and picture-in-picture attacks known collectively as the &lt;a href=&#34;https://textslashplain.com/2017/01/14/the-line-of-death/&#34; target=&#34;_blank&#34;&gt;Line of Death&lt;/a&gt;.
+The Line of Trust project seeks to understand the security, privacy, and human-factors related to a class of phishing
+and picture-in-picture attacks known collectively as the &lt;a href=&#34;https://textslashplain.com/2017/01/14/the-line-of-death/&#34; target=&#34;_blank&#34;&gt;Line of Death&lt;/a&gt;.
 Contextualizing relevant literature and systematically analyzing the underlying
 problems in the Line of Death space will contribute to a Systematization of
 Knowledge (SoK) paper, which we intend to augment with a thoughtful user study.
@@ -31,28 +32,41 @@ The goal of this blog post is to present the culmination of our work throughout 
 six weeks of the semester and provide a roadmap for our team&amp;rsquo;s plans to move
 forward through the summer months.&lt;/p&gt;
 
+&lt;p&gt;TODO: Add anything else relevant to the project overview and this post&amp;rsquo;s
+overview here.&lt;/p&gt;
+
 &lt;h1 id=&#34;presentation&#34;&gt;Presentation&lt;/h1&gt;
 
 &lt;script async class=&#34;speakerdeck-embed&#34;
 data-id=&#34;710bc0557e1240d9a9d209d1ed14ddde&#34; data-ratio=&#34;1.33333333333333&#34;
 src=&#34;//speakerdeck.com/assets/embed.js&#34;&gt;&lt;/script&gt;
 
-&lt;p&gt;Talk about the presentation for a few paragraphs and relate it to what we are
+&lt;p&gt;&lt;a href=&#34;https://tlseminar.github.io/&#34; target=&#34;_blank&#34;&gt;TLSeminar&lt;/a&gt;&amp;rsquo;s mini-conference provided our team
+the opportunity to motivate and present our project work during the latter half
+of the semester. Our presentation (above) focused on describing the research
+problem through a case study of an elaborate picture-in-picture &lt;a href=&#34;https://www.tripwire.com/state-of-security/latest-security-news/tech-support-scam-uses-website-elements-spoof-microsoft-support-page/&#34; target=&#34;_blank&#34;&gt;Microsoft Support Webpage
+Scam&lt;/a&gt;
+reported in March 2017.&lt;/p&gt;
+
+&lt;p&gt;TODO: Talk about the presentation and its slides for a few paragraphs and relate it to what we are
 posting below. In particular, discuss the relevance of the Microsoft support
 picture-in-picture case study.&lt;/p&gt;
 
 &lt;h1 id=&#34;introduction&#34;&gt;Introduction&lt;/h1&gt;
 
-&lt;p&gt;Describe a general introduction to the problem and why it needs attention/merits
-an SoK. Should be at least a couple paragraphs with sources.&lt;/p&gt;
+&lt;p&gt;TODO: Describe a general introduction to the problem and why it needs attention/merits
+an SoK. Should be at least a couple paragraphs with sources. To make this
+easier, take a look at what we&amp;rsquo;ve written in previous posts and discussions on
+the slack channel.&lt;/p&gt;
 
 &lt;h1 id=&#34;systematization&#34;&gt;Systematization&lt;/h1&gt;
 
 &lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;
 
-&lt;p&gt;Describe the general approach to our systematization (talk about the 6 questions
+&lt;p&gt;TODO: Describe the general approach to our systematization (talk about the 6 questions
 Bill came up with and why we choose them for our analysis). A couple paragraphs
-in total should suffice.&lt;/p&gt;
+in total should suffice. Just take the six questions below and justify/summarize
+them with a few sentences each.&lt;/p&gt;
 
 &lt;ol&gt;
 &lt;li&gt;What problem(s) does the resource address?&lt;/li&gt;
@@ -67,7 +81,8 @@ the implementation of the solution?&lt;/li&gt;
 
 &lt;h2 id=&#34;paper-1&#34;&gt;Paper 1&lt;/h2&gt;
 
-&lt;p&gt;Perform the systematization analysis on each paper you have read.&lt;/p&gt;
+&lt;p&gt;TODO: Perform the systematization analysis on each paper you have read using our
+methodology as described aboce.&lt;/p&gt;
 
 &lt;h2 id=&#34;paper-2&#34;&gt;Paper 2&lt;/h2&gt;
 
@@ -75,12 +90,30 @@ the implementation of the solution?&lt;/li&gt;
 
 &lt;h2 id=&#34;conclusion-tie-in&#34;&gt;Conclusion/Tie-In&lt;/h2&gt;
 
-&lt;p&gt;Relate the paper&amp;rsquo;s systematizations.&lt;/p&gt;
+&lt;p&gt;TODO: Relate the systematizations and discuss their purpose in our target of
+motivating the need for research in the Line of Death class of attacks.&lt;/p&gt;
 
-&lt;h1 id=&#34;project-roadmap&#34;&gt;Project Roadmap&lt;/h1&gt;
+&lt;h1 id=&#34;deliverable-conclusion-and-project-roadmap&#34;&gt;Deliverable Conclusion and Project Roadmap&lt;/h1&gt;
+
+&lt;p&gt;In this blog post, we first motivated and described our semester&amp;rsquo;s efforts
+towards the Line of Trust project, using our class presentation slides and a
+&lt;a href=&#34;https://www.tripwire.com/state-of-security/latest-security-news/tech-support-scam-uses-website-elements-spoof-microsoft-support-page/&#34; target=&#34;_blank&#34;&gt;compelling case
+study&lt;/a&gt;.
+Secondly, we detailed and evaluated our methodology for systematizing research
+literature and community blog posts of significance the Line of Death class of attacks
+we consider in the scope of the project and its goals.
+Thirdly, we coalesced and analyzed a variety of literature according to our
+systematization techniques, and constructed general relationships between the class of
+problems uncovered in our literature systematization.&lt;/p&gt;
+
+&lt;p&gt;As the semester is coming to an end, our plans for the future of the project
+are as follows:&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;Discuss our summer plans and November deadline&lt;/li&gt;
+&lt;li&gt;We intend to continue work on the Line of Trust project during the summer
+months, with the goal of submitting a qualitative Systematization of Knowledge
+research paper to a conference in the fall term.
+TODO:&lt;/li&gt;
 &lt;li&gt;Discuss our goals in designing and carrying out a thoughtful user study&lt;/li&gt;
 &lt;li&gt;Discuss our goals in polishing/refining our systematization techniques&lt;/li&gt;
 &lt;li&gt;Discuss other ideas/routes/directions for the SoK that we want to consider&lt;/li&gt;
@@ -88,7 +121,8 @@ the implementation of the solution?&lt;/li&gt;
 
 &lt;h1 id=&#34;references&#34;&gt;References&lt;/h1&gt;
 
-&lt;p&gt;Include all paper references and blog posts here.&lt;/p&gt;
+&lt;p&gt;TODO: Include all paper references and blog posts as links in the post&amp;rsquo;s
+content. Remove this section once you&amp;rsquo;re done!&lt;/p&gt;
 </description>
     </item>
     
