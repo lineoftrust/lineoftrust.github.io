@@ -9,7 +9,7 @@
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
 <meta property="og:locale" content="en_US" />
-<meta property="og:url" content="https://lineoftrust.github.io/post/springDeliverable/" />
+<meta property="og:url" content="https://lineoftrust.github.io/post/springdeliverable/" />
 
 
     <link href="" rel="alternate" type="application/rss+xml" title="Line Of Trust" />
@@ -30,7 +30,7 @@
     <meta name="keywords" content="">
     <meta name="author" content="">
 
-    <meta name="generator" content="Hugo 0.17" />
+    <meta name="generator" content="Hugo 0.20.2" />
 </head>
 
 
@@ -60,7 +60,7 @@
         </header>
         
         <div class="article-meta">
-            <a href="/post/springDeliverable/" class="article-date">
+            <a href="/post/springdeliverable/" class="article-date">
                 <time datetime='2017-05-02T14:40:06.000-04:00' itemprop="datePublished">2017-05-02</time>
             </a>
             
@@ -116,10 +116,39 @@ picture-in-picture case study.</p>
 
 <h1 id="introduction">Introduction</h1>
 
-<p>TODO: Describe a general introduction to the problem and why it needs attention/merits
-an SoK. Should be at least a couple paragraphs with sources. To make this
-easier, take a look at what we&rsquo;ve written in previous posts and discussions on
-the slack channel.</p>
+<p>The state of web browser client UI today is best described as a disjoint medley of vulnerabilities, contradictory design principles, and implied security conditions.  Apart from the overarching design paradigm of a URL bar perched above page content with a tab-interface situated nearby, almost all aspects of contemporary web browsers vary from one vendor to the next.  There exist no universal security indicators, nor are the relative levels of security—think mixed HTTPS vs full HTTPS—ever explicitly presented to consumers of these products.  Warning prompts, pop-ups, and alerts are all handled differently.  Settings are difficult to find.  Extensive assortments of flags, optional settings, and advanced content featuers are tucked away far beneath the visible surface of the browser interface.</p>
+
+<p>This industry-wide abuse of basic UI principles has resulted in a number of frightening security implications for everday users—issues that have largely gone unaddressed in the security community for the past decade.  Though major vendors like Google (developer of the Chromium project and the Chrome web browser) have taken steps to address some of the more sophisticated UI security issues plaguing web browsers, much more must be done to provide a sense of security for the vast majority of average Internet users who are most vulnerable.</p>
+
+<p>This post is the result of six weeks of brainstorming, reading, contemplating, presenting, and concerted discussion surrounding web browser UI security.  In it, we seek to provide a framework to systematize current and proposed approaches aimed at improving web browser client UI, venturing as far as offering a few suggestions of our own.</p>
+
+<p>Before we delve into that, however, some motivation is in order.</p>
+
+<h2 id="the-line-of-death">The Line of Death</h2>
+
+<p>In January of this year, Eric Lawrence, writing for <em>text/plain</em>, published an <a href="https://textslashplain.com/2017/01/14/the-line-of-death/" target="_blank">article</a> about an intriguing concept he coined the &ldquo;Line of Death&rdquo; that demarcates trusted from untrusted content in a web browser.  Consider the image below.</p>
+
+<p><img src="https://textplain.files.wordpress.com/2017/01/image36.png?w=1440&amp;h=584" alt="The Line of Death (text/plain)" title="The Line of Death" /></p>
+
+<p>As you can see, the page, <em>www.example.com</em>, exercises full control over the content below the red dotted line—the &ldquo;line of death.&rdquo;  Consequently, as a user, you should not trust anything below this line that appears to be imitating a legitimate browser function.  For example, consider a malicious page attempting to redirect you to a spyware site.  The page may generate a fake element that looks like a generic &ldquo;alert&rdquo; box, but since it appears below the line of death, the user should assume that it may be fake and thus refrain from clicking.  As one would imagine, this notion is problematic—<em>real</em> alert boxes actually <em>do</em> appear in the untrusted page content!  How are average users expected to differentiate between legitimate alerts hovering <em>above</em> the browser window and fake alerts displayed <em>within</em> the browser window?  Making matters worse, malicious developers can even deploy JQuery scripts that cause their fake alert boxes to mimic the UI functionality of legitimate boxes—click and drag, &ldquo;cancel,&rdquo; etc.  This mimicry is not limited to alert boxes; page elements such as download prompts, microphone/camera permission prompts, and plugin prompts are all vulnerable to imitation.</p>
+
+<p>We can extend this basic line of death example even further by imaging a scenario in which the <em>entire trusted UI</em> —tab bar, URL bar, bookmarks, HTTPS status—are spoofed within the untrusted content area.  <em>But that would be so obvious</em>, you exclaim!  Well, as we shall see, this so-called &ldquo;picture-in-picture&rdquo; attack is most potent when the user enters full-screen mode, wherein the trusted UI portion disappears from view to provide the user with more screen space.  An unsuspecting user could <em>easily</em> forget that a URL bar should not be present and simply trust the URL bar and security indicators that happen to be dispalyed in the spoofed UI.  For example, in the image below, the entire legitimate, trusted browser UI one would expect to see while visiting PayPal.com is spoofed and displayed <em>inside the untrusted content area</em>.</p>
+
+<p><img src="https://textplain.files.wordpress.com/2017/01/image40.png?w=1516&amp;h=982" alt="Picture-in-Picture Attack (text/plain)" title="Picture-in-Picture" /></p>
+
+<h2 id="certified-malice">Certified Malice</h2>
+
+<p>In a <a href="https://textslashplain.com/2017/01/16/certified-malice/" target="_blank">follow-up piece</a> to <em>Line of Death</em> published only two days following the original article, Eric Lawrence presented another, more insidious browser UI weakness:  malicious websites can just as easily acquire HTTPS certificates as legitimate websites.  This so-called &ldquo;certified malice&rdquo; renders the identification of illegitimate spoofing sites nearly impossible.  In this threat model, phishing sites attempting to masquerade as legitimate sites &ldquo;secure&rdquo; their pages with HTTPS certificates, leading users— <em>generations of whom have been trained to trust the green lock</em> —to believe the malicious site is &ldquo;good.&rdquo;  (We cannot help but point out the obvious irony:  HTTPS certificate proliferation helps the bad guys, too!)</p>
+
+<p>Clearly, this intricate web of UI, security, and social engineering issues necessitates attention to ensure average web browsers do not go astray attempting to check email online.  The two articles referenced above were published <em>less than four months ago</em> and represent the <em>only</em> contemporary inquiries into web browser UI problems.  In fact, it seems that most serious academic work in this area ceased about ten years ago.  This abrupt end to the study of web phishing attacks could mean one of three things:</p>
+
+<ol>
+<li>Web phishing is a hard problem with few clear answers, therefore it&rsquo;s difficult to be published, hence the lack of published papers.</li>
+<li>No one cares about web phishing anymore.  It&rsquo;s not cool.</li>
+<li>The research community has been focusing on other pursuits in the past decade but would certainly investigate these issues if given a friendly reminder.</li>
+</ol>
+
+<p>We maintain a firm belief in option #3, and in the potential for future investigation and academic work.  This systematization and roadmap seeks to codify that belief.</p>
 
 <h1 id="systematization">Systematization</h1>
 
@@ -196,7 +225,11 @@ content. Remove this section once you&rsquo;re done!</p>
 <ul>
 <li><a href="#spring-deliverable">Spring Deliverable</a></li>
 <li><a href="#presentation">Presentation</a></li>
-<li><a href="#introduction">Introduction</a></li>
+<li><a href="#introduction">Introduction</a>
+<ul>
+<li><a href="#the-line-of-death">The Line of Death</a></li>
+<li><a href="#certified-malice">Certified Malice</a></li>
+</ul></li>
 <li><a href="#systematization">Systematization</a>
 <ul>
 <li><a href="#overview">Overview</a></li>
@@ -243,6 +276,11 @@ content. Remove this section once you&rsquo;re done!</p>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js" integrity="sha256-KbfTjB0WZ8vvXngdpJGY3Yp3xKk+tttbqClO11anCIU=" crossorigin="anonymous"></script>
     <script>hljs.initHighlightingOnLoad();</script>
 
+    
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css" integrity="sha384-wITovz90syo1dJWVh32uuETPVEtGigN07tkttEqPv+uR2SE/mbQcG7ATL28aI9H0" crossorigin="anonymous">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.js" integrity="sha384-/y1Nn9+QQAipbNQWU65krzJralCnuOasHncUFXGkdwntGeSvQicrYkiUBwsgUqc1" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/contrib/auto-render.min.js" integrity="sha256-ExtbCSBuYA7kq1Pz362ibde9nnsHYPt6JxuxYeZbU+c=" crossorigin="anonymous"></script>
+        <script>renderMathInElement(document.body);</script>
     
     <script>
         document.getElementById('main-nav-toggle').addEventListener('click', function () {
