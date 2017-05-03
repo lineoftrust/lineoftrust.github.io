@@ -24,8 +24,6 @@ The goal of this blog post is to present the culmination of our work throughout 
 six weeks of the semester and provide a roadmap for our team's plans to move
 forward through the summer months.
 
-TODO: Add anything else relevant to the project overview and this post's
-overview here.
 
 # Presentation
 <script async class="speakerdeck-embed"
@@ -39,9 +37,6 @@ problem through a case study of an elaborate picture-in-picture [Microsoft Suppo
 Scam](https://www.tripwire.com/state-of-security/latest-security-news/tech-support-scam-uses-website-elements-spoof-microsoft-support-page/) 
 reported in March 2017.
 
-TODO: Talk about the presentation and its slides for a few paragraphs and relate it to what we are
-posting below. In particular, discuss the relevance of the Microsoft support
-picture-in-picture case study.
 
 # Introduction
 The state of web browser client UI today is best described as a disjoint medley of vulnerabilities, contradictory design principles, and implied security conditions.  Apart from the overarching design paradigm of a URL bar perched above page content with a tab-interface situated nearby, almost all aspects of contemporary web browsers vary from one vendor to the next.  There exist no universal security indicators, nor are the relative levels of security—think mixed HTTPS vs full HTTPS—ever explicitly presented to consumers of these products.  Warning prompts, pop-ups, and alerts are all handled differently.  Settings are difficult to find.  Extensive assortments of flags, optional settings, and advanced content featuers are tucked away far beneath the visible surface of the browser interface. 
@@ -138,11 +133,18 @@ advantages of implementing a trusted path, however, are quite effective and
 serve as a model of a solution to picture-in-picture attacks from the trusted
 base of the browser.
 
-## Paper N ... etc
+## Rethinking URL Bars as Primary Browser UI
+In [this work](https://medium.com/@owencm/rethinking-url-bars-as-primary-browser-ui-e2118339d2c0), Google employee Owen Campbell-Moore argues that the browser URL bar provides users with antiquated information and delivers a call-to-action for overhauling browser UI.  This piece is of particular interest to the systematization since it directly addresses browser UI, and the solution proposed—overhauling browser UI by removing the URL bar and replacing it with an _origin-to-local-brand-mapping_ interface—would greatly alter the browser security landscape.  According to Campbell-Moore, URL bars exist to perform three basic tasks:
 
-## Conclusion/Tie-In
-TODO: Relate the systematizations and discuss their purpose in our target of
-motivating the need for research in the Line of Death class of attacks.
+1. Provide the identity of the site being visited (domain name, title tag)
+2. Indicate relative location in the site organization (path)
+3. Provide an easy-to-share resource link (URL)
+
+Tasks (1) and (2) are increasingly unnecessary, since most users rely on search engines, apps, bookmarks, and history to navigate to destination sites.  As a result, there are fewer opportunities to manually provide URLs, and as mobile browsing continues to decimate client browsing, there will be even fewer.  The user’s current path location on websites is used even less, especially given the proliferation of dynamically generated "app-like" content of Web 2.0.  In fact, Campbell-Moore argues that only (3) is still legitimate, but even that is being replaced by the ubiquitous "share" buttons connected to various social media entities.
+
+_Origin-to-local-brand-mapping_ would operate in a manner similar to DNS or certificates, in that an "identity" is mapped to a resource, except in this case, the identity would consist of a name and a logo.  The idea would be to _only_ provide this mapping to certain "well known" web sites, thus avoiding the scenario in which a legitimate site registers for the mapping service.  As a result, it would be very obvious to casual browsers whether they have arrived at the **real** PayPal.com or not, since the **real** PayPal.com will come with an origin-to-local-brand-mapping that clearly signals its legitimacy.
+
+Obvious concerns include the notion of compiling and maintaining a "well-known sites" index, since at face value, this seems to violate neutrality and place a vast amount of power into one organization’s hands (likely a search engine, likely Google).
 
 # Deliverable Conclusion and Project Roadmap
 In this blog post, we first motivated and described our semester's efforts 
@@ -163,6 +165,8 @@ are as follows:
 months, with the goal of submitting a qualitative Systematization of Knowledge
 research paper to a conference in the fall term.
 
+- Given the difficulties encountered in uncovering reputable, relevant academic work in this particular area of interest, we hope to incorporate more resources into this systematization in order to provide a more holistic view of the state of web browser UI.
+
 ## Design Considerations:  User Study
 
 Designing a thoughtful user study related to security is not a trivial undertaking.  As [Gaw et al.](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.136.5612&rep=rep1&type=pdf) and [Dourish et al.](http://www.dourish.com/publications/2004/PUC2004-security.pdf) argue, user practices related to security need to be understood, yet actually obtaining observational data about the nature of user practices is challenging, since security is rarely interacted with directly.
@@ -171,11 +175,15 @@ Qualitative techniques such as interviews and surveys can be successful but have
 
 Lastly, the nature of conducting a study on security practices unavoidably introduces bias into the results, since the evaluator must somehow prime the participant to focus specifically on security, as [Wu et al.](http://up.csail.mit.edu/projects/phishing/chi-security-toolbar.pdf) note.  Thus, a good security study must make security a peripheral goal rather than a primary goal.
 
+We believe a web browser UI user study must seek to answer a series of questions:
 
-TODO: 
-- Discuss our goals in designing and carrying out a thoughtful user study
-- Discuss our goals in polishing/refining our systematization techniques
-- Discuss other ideas/routes/directions for the SoK that we want to consider
+1. **Can users differentiate legitimate UI from spoofed UI?** To answer this question, users will need to differentiate between fake UI elements generated in the page below the line of death and legitimate UI elements that happen to be overlaid on untrusted content.  Though an outright comparison survey would be useful, many of these spoofing attacks rely on users missing subtle visual cues—cues that they would be highly attuned to while conducting a survey.  As a result, identifying fake versus legitimate UI elements must be a secondary, passive object built into some other test.  In effect, we need to mislead the study participants so that they are’t paying explicit attention to visual UI cues, but instead interacting with them naturally.
+
+2. **Can users detect picture-in-picture attacks?** A similar approach to (1) is desired here—the users can’t know what is going on.  This would gain added legitimacy if it were tested on both mobile and desktop browsers.
+
+3. **Do users understand what security or privacy guarantees the green TLS "lock" icon implies?** How well do web users understand the concept that a malicious page with a secure connection is still malicious?
+
+The experimental answers to these questions would help us determine whether this is, in fact, a serious problem that users are vulnerable to, rather than a niche phishing concern with little practical relevance in reality.
 
 # References
 TODO: Include all paper references and blog posts as links in the post's

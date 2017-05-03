@@ -94,9 +94,6 @@ The goal of this blog post is to present the culmination of our work throughout 
 six weeks of the semester and provide a roadmap for our team&rsquo;s plans to move
 forward through the summer months.</p>
 
-<p>TODO: Add anything else relevant to the project overview and this post&rsquo;s
-overview here.</p>
-
 <h1 id="presentation">Presentation</h1>
 
 <script async class="speakerdeck-embed"
@@ -109,10 +106,6 @@ of the semester. Our presentation (above) focused on describing the research
 problem through a case study of an elaborate picture-in-picture <a href="https://www.tripwire.com/state-of-security/latest-security-news/tech-support-scam-uses-website-elements-spoof-microsoft-support-page/" target="_blank">Microsoft Support Webpage
 Scam</a>
 reported in March 2017.</p>
-
-<p>TODO: Talk about the presentation and its slides for a few paragraphs and relate it to what we are
-posting below. In particular, discuss the relevance of the Microsoft support
-picture-in-picture case study.</p>
 
 <h1 id="introduction">Introduction</h1>
 
@@ -221,12 +214,21 @@ advantages of implementing a trusted path, however, are quite effective and
 serve as a model of a solution to picture-in-picture attacks from the trusted
 base of the browser.</p>
 
-<h2 id="paper-n-etc">Paper N &hellip; etc</h2>
+<h2 id="rethinking-url-bars-as-primary-browser-ui">Rethinking URL Bars as Primary Browser UI</h2>
 
-<h2 id="conclusion-tie-in">Conclusion/Tie-In</h2>
+<p>In <a href="https://medium.com/@owencm/rethinking-url-bars-as-primary-browser-ui-e2118339d2c0" target="_blank">this work</a>, Google employee Owen Campbell-Moore argues that the browser URL bar provides users with antiquated information and delivers a call-to-action for overhauling browser UI.  This piece is of particular interest to the systematization since it directly addresses browser UI, and the solution proposed—overhauling browser UI by removing the URL bar and replacing it with an <em>origin-to-local-brand-mapping</em> interface—would greatly alter the browser security landscape.  According to Campbell-Moore, URL bars exist to perform three basic tasks:</p>
 
-<p>TODO: Relate the systematizations and discuss their purpose in our target of
-motivating the need for research in the Line of Death class of attacks.</p>
+<ol>
+<li>Provide the identity of the site being visited (domain name, title tag)</li>
+<li>Indicate relative location in the site organization (path)</li>
+<li>Provide an easy-to-share resource link (URL)</li>
+</ol>
+
+<p>Tasks (1) and (2) are increasingly unnecessary, since most users rely on search engines, apps, bookmarks, and history to navigate to destination sites.  As a result, there are fewer opportunities to manually provide URLs, and as mobile browsing continues to decimate client browsing, there will be even fewer.  The user’s current path location on websites is used even less, especially given the proliferation of dynamically generated &ldquo;app-like&rdquo; content of Web 2.0.  In fact, Campbell-Moore argues that only (3) is still legitimate, but even that is being replaced by the ubiquitous &ldquo;share&rdquo; buttons connected to various social media entities.</p>
+
+<p><em>Origin-to-local-brand-mapping</em> would operate in a manner similar to DNS or certificates, in that an &ldquo;identity&rdquo; is mapped to a resource, except in this case, the identity would consist of a name and a logo.  The idea would be to <em>only</em> provide this mapping to certain &ldquo;well known&rdquo; web sites, thus avoiding the scenario in which a legitimate site registers for the mapping service.  As a result, it would be very obvious to casual browsers whether they have arrived at the <strong>real</strong> PayPal.com or not, since the <strong>real</strong> PayPal.com will come with an origin-to-local-brand-mapping that clearly signals its legitimacy.</p>
+
+<p>Obvious concerns include the notion of compiling and maintaining a &ldquo;well-known sites&rdquo; index, since at face value, this seems to violate neutrality and place a vast amount of power into one organization’s hands (likely a search engine, likely Google).</p>
 
 <h1 id="deliverable-conclusion-and-project-roadmap">Deliverable Conclusion and Project Roadmap</h1>
 
@@ -245,9 +247,11 @@ problems uncovered in our literature systematization.</p>
 are as follows:</p>
 
 <ul>
-<li>We intend to continue work on the Line of Trust project during the summer
+<li><p>We intend to continue work on the Line of Trust project during the summer
 months, with the goal of submitting a qualitative Systematization of Knowledge
-research paper to a conference in the fall term.</li>
+research paper to a conference in the fall term.</p></li>
+
+<li><p>Given the difficulties encountered in uncovering reputable, relevant academic work in this particular area of interest, we hope to incorporate more resources into this systematization in order to provide a more holistic view of the state of web browser UI.</p></li>
 </ul>
 
 <h2 id="design-considerations-user-study">Design Considerations:  User Study</h2>
@@ -271,9 +275,6 @@ research paper to a conference in the fall term.</li>
 <p>The experimental answers to these questions would help us determine whether this is, in fact, a serious problem that users are vulnerable to, rather than a niche phishing concern with little practical relevance in reality.</p>
 
 <h1 id="references">References</h1>
-
-<p>TODO: Include all paper references and blog posts as links in the post&rsquo;s
-content. Remove this section once you&rsquo;re done!</p>
 
 <ul>
 <li><a href="https://textslashplain.com/2017/01/14/the-line-of-death/" target="_blank">https://textslashplain.com/2017/01/14/the-line-of-death/</a></li>
@@ -308,8 +309,7 @@ content. Remove this section once you&rsquo;re done!</p>
 <li><a href="#paper-2">Paper 2</a></li>
 <li><a href="#operating-system-framed-in-case-of-mistaken-identity-measuring-the-success-of-web-based-spoofing-attacks-on-os-password-entry-dialogs">Operating System Framed in Case of Mistaken Identity: Measuring the success of web-based spoofing attacks on OS password-entry dialogs</a></li>
 <li><a href="#guardroid-trusted-path-authentication">GuarDroid (Trusted Path, Authentication)</a></li>
-<li><a href="#paper-n-etc">Paper N &hellip; etc</a></li>
-<li><a href="#conclusion-tie-in">Conclusion/Tie-In</a></li>
+<li><a href="#rethinking-url-bars-as-primary-browser-ui">Rethinking URL Bars as Primary Browser UI</a></li>
 </ul></li>
 <li><a href="#deliverable-conclusion-and-project-roadmap">Deliverable Conclusion and Project Roadmap</a>
 <ul>
