@@ -186,8 +186,6 @@ We believe a web browser UI user study must seek to answer a series of questions
 The experimental answers to these questions would help us determine whether this is, in fact, a serious problem that users are vulnerable to, rather than a niche phishing concern with little practical relevance in reality.
 
 # References
-TODO: Include all paper references and blog posts as links in the post's
-content. Remove this section once you're done!
 
 - [https://textslashplain.com/2017/01/14/the-line-of-death/](https://textslashplain.com/2017/01/14/the-line-of-death/)
 - [https://textslashplain.com/2017/01/16/certified-malice/](https://textslashplain.com/2017/01/16/certified-malice/)
