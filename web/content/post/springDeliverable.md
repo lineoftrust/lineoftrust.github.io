@@ -134,11 +134,11 @@ serve as a model of a solution to picture-in-picture attacks from the trusted
 base of the browser.
 
 ## Rethinking URL Bars as Primary Browser UI
-In [this work](https://medium.com/@owencm/rethinking-url-bars-as-primary-browser-ui-e2118339d2c0), Google employee Owen Campbell-Moore argues that the browser URL bar provides users with antiquated information and provides a call-to-action for overhauling browser UI.  This piece is of particular interest to the systematization since it directly addresses browser UI, and the solution proposed—overhauling browser UI by removing the URL bar and replacing it with an _origin-to-local-brand-mapping_ interface—would greatly alter the browser security landscape.  According to Campbell-Moore, URL bars exist to perform three basic tasks:
+In [this work](https://medium.com/@owencm/rethinking-url-bars-as-primary-browser-ui-e2118339d2c0), Google employee Owen Campbell-Moore argues that the browser URL bar provides users with antiquated information and delivers a call-to-action for overhauling browser UI.  This piece is of particular interest to the systematization since it directly addresses browser UI, and the solution proposed—overhauling browser UI by removing the URL bar and replacing it with an _origin-to-local-brand-mapping_ interface—would greatly alter the browser security landscape.  According to Campbell-Moore, URL bars exist to perform three basic tasks:
 
-1. They provide the identity of the site we’re visiting (domain name, title tag)
-2. They tell us our relative location in the site organization (path)
-3. They provide an easy-to-share resource link (URL)
+1. Provide the identity of the site being visited (domain name, title tag)
+2. Indicate relative location in the site organization (path)
+3. Provide an easy-to-share resource link (URL)
 
 Tasks (1) and (2) are increasingly unnecessary, since most users rely on search engines, apps, bookmarks, and history to navigate to destination sites.  As a result, there are fewer opportunities to manually provide URLs, and as mobile browsing continues to decimate client browsing, there will be even fewer.  The user’s current path location on websites is used even less, especially given the proliferation of dynamically generated "app-like" content of Web 2.0.  In fact, Campbell-Moore argues that only (3) is still legitimate, but even that is being replaced by the ubiquitous "share" buttons connected to various social media entities.
 
@@ -164,6 +164,8 @@ are as follows:
 - We intend to continue work on the Line of Trust project during the summer
 months, with the goal of submitting a qualitative Systematization of Knowledge
 research paper to a conference in the fall term.
+
+- Given the difficulties encountered in uncovering reputable, relevant academic work in this particular area of interest, we hope to incorporate more resources into this systematization in order to provide a more holistic view of the state of web browser UI.
 
 ## Design Considerations:  User Study
 
