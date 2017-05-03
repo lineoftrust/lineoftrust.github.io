@@ -298,8 +298,8 @@ The experimental answers to these questions would help us determine whether this
 <li><a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.464.9463&amp;rep=rep1&amp;type=pdf" target="_blank">Gathering Evidence: Use of Visual Security Cues in Web Browsers</a></li>
 <li><a href="http://up.csail.mit.edu/projects/phishing/chi-security-toolbar.pdf" target="_blank">Do Security Toolbars Actually Prevent Phishing Attacks?</a></li>
 <li><a href="http://www.guanotronic.com/~serge/papers/chi07.pdf" target="_blank">Security User Studies: Methodologies and Best Practices</a></li>
-- [https://crypto.stanford.edu/SpoofGuard/](https://crypto.stanford.edu/SpoofGuard/)
-- [http://delivery.acm.org/10.1145/1070000/1065546/p153-ye.pdf](http://delivery.acm.org/10.1145/1070000/1065546/p153-ye.pdf)
+<li><a href="https://crypto.stanford.edu/SpoofGuard/" target="_blank">https://crypto.stanford.edu/SpoofGuard/</a></li>
+<li><a href="http://delivery.acm.org/10.1145/1070000/1065546/p153-ye.pdf" target="_blank">http://delivery.acm.org/10.1145/1070000/1065546/p153-ye.pdf</a></li>
 <li><a href="https://web.sec.uni-passau.de/papers/2014_Braun_Koestler_Posegga_Johns-Trusted-UI-Mobile-Web.pdf" target="_blank">A Trusted UI for the Mobile Web (2014)</a></li>
 <li><a href="http://www.cs.dartmouth.edu/~sws/pubs/ysa05.pdf" target="_blank">Trusted Paths for Browsers (2002)</a></li>
 <li><a href="https://cups.cs.cmu.edu/soups/2013/proceedings/a6_Bravo-Lillo.pdf" target="_blank">Your Attention Please (2013)</a></li>
