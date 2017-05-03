@@ -171,11 +171,15 @@ Qualitative techniques such as interviews and surveys can be successful but have
 
 Lastly, the nature of conducting a study on security practices unavoidably introduces bias into the results, since the evaluator must somehow prime the participant to focus specifically on security, as [Wu et al.](http://up.csail.mit.edu/projects/phishing/chi-security-toolbar.pdf) note.  Thus, a good security study must make security a peripheral goal rather than a primary goal.
 
+We believe a web browser UI user study must seek to answer a series of questions:
 
-TODO: 
-- Discuss our goals in designing and carrying out a thoughtful user study
-- Discuss our goals in polishing/refining our systematization techniques
-- Discuss other ideas/routes/directions for the SoK that we want to consider
+1. **Can users differentiate legitimate UI from spoofed UI?** To answer this question, users will need to differentiate between fake UI elements generated in the page below the line of death and legitimate UI elements that happen to be overlaid on untrusted content.  Though an outright comparison survey would be useful, many of these spoofing attacks rely on users missing subtle visual cues—cues that they would be highly attuned to while conducting a survey.  As a result, identifying fake versus legitimate UI elements must be a secondary, passive object built into some other test.  In effect, we need to mislead the study participants so that they are’t paying explicit attention to visual UI cues, but instead interacting with them naturally.
+
+2. **Can users detect picture-in-picture attacks?** A similar approach to (1) is desired here—the users can’t know what is going on.  This would gain added legitimacy if it were tested on both mobile and desktop browsers.
+
+3. **Do users understand what security or privacy guarantees the green TLS "lock" icon implies?** How well do web users understand the concept that a malicious page with a secure connection is still malicious?
+
+The experimental answers to these questions would help us determine whether this is, in fact, a serious problem that users are vulnerable to, rather than a niche phishing concern with little practical relevance in reality.
 
 # References
 TODO: Include all paper references and blog posts as links in the post's
