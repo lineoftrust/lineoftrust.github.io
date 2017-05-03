@@ -146,6 +146,58 @@ _Origin-to-local-brand-mapping_ would operate in a manner similar to DNS or cert
 
 Obvious concerns include the notion of compiling and maintaining a "well-known sites" index, since at face value, this seems to violate neutrality and place a vast amount of power into one organization’s hands (likely a search engine, likely Google).
 
+## Phishing
+
+
+### Motivation
+
+In March 2017, Tripwire reported on a phishing scam that claimed to be a Microsoft support page. Victims of this scam were presented with a virus warning in a popup over the fake support page. The page proceeds to enter full-screen mode, appearing to the user as an entire browser window with rendered page. Thus, the page itself displays the browser header, although a user will assume that this header belongs to the browser itself. The only evidence that the browser header in view is fake is the default browser's warning for full-screen mode. Sophisticated Line of Death attacks such as this are becoming increasingly used for phishing. 
+
+### Attack types
+
+There are several targets of web browser UI spoofing attacks. These can broadly be categorized into attacks against the identity of the server being accessed or attacks against the operating system windows. In the latter, the page renders elements that mimic popup windows from the operating system, usually with the intention of asking the user for escalated permissions. However, since the human-centric aspect of Line of Death attacks is similar for OS and server spoofing, we primarily consider the server case. Server spoofing typically targets the identity of the server, attempting to convince the user of its authenticity. The classical Line of Death attack for spoofing user interface elements is the picture-in-picture attack, in which the page contains fake browser elements such as the header. The Microsoft support page spoof discussed above is such an attack. More specific attacks can attempt to spoof the connection and appear to use a TLS connection to the intended site, while in reality the connection may be unprotected or may connect to a malicious site. 
+
+
+### Solution principles
+
+Literature in the area of browser spoofing protection has yielded several guiding principles for effective solutions. These principles define the qualitative behaviors of effective solutions and account for user behavior. 
+
+	1. Solutions should require minimal user effort. Browser users have widely disparate backgrounds in web security and cannot be relied upon to understand extremely specific security warning messages. Furthermore, the nature of Line of Death attacks exploits limitations in human perception, and can often fool even seasoned security experts.
+	2. Solutions should be all-inclusive and easily identifiable. Graphical solutions should be easy for users to recognize and solution approaches should address many different kinds of attacks. 
+	3. Solutions should not be intrusive. Browser users are more concerned with the content they are trying to reach than security warnings, and excessive warnings will annoy users and desensitize them to warnings in general.
+
+	
+These principles are subject to the security vs. usability tradeoff. Increased security warnings and indicators may alert the user to threats but may simultaneously degrade the user experience. 
+
+
+### Approaches
+
+There are various approaches for resolving browser UI spoofing. These approaches can be evaluated based on the principles above. No approach is perfect, but their strengths and weaknesses inform new areas of approach for solutions. These approaches are largely based on the concept that the browser must distinguish between the content and status (context, connection, server) of the page. 
+
+One approach is to never allow browser status information to be turn off. With this approach, status information is always visible to the user while the browser is running, allows a user to always know the identity and nature of their connection to the site they are trying to access. Although this provides a consistent source of information to the user, this display can be obstructive to webpage content and may harm the user experience. 
+	
+As an alternative to constant indicators of security status, the browser can request a certain degree of customization for the user's browsing experience. Customized UI features provide familiarity, and by extension, trust. Browser elements that can present the user with customized features can therefore authenticate itself to the user by presenting the user with a secret (customizations) shared between the user and the true browser. However, this approach requires the user to consistently look for these customizations and recognize that the lack of customizations is an indicator of danger. Abstractly, this means presenting a user with a lack of a security icon to indicate threats. This cannot be guaranteed (or even expected) from most users.
+	
+The title and header bar of the browser can be modified to present metadata about the site and connection associated with a browser tab. For example, the true URL for a connection can be displayed on the window title. However, this can be easily spoofed by a targeted phishing site, since the metadata title can be rendered as part of the page. A similar approach involves entirely separating content from the metadata by presenting the metadata in a separate browser window. 
+	
+### Tools
+
+Researchers have developed various tools that utilize these approaches to attempt to resolve the Line of Death and related browser UI spoofing.
+
+One such tool is SpoofGuard, developed at Stanford University in 2004. SpoofGuard adds a browser bar indicator with  green, yellow, and red lights. These lights serve as a ranking of threat level for any page that the user visits.  SppofGuard performs 2 rounds of checks on each page: the first is performed before navigating to the page and the second is afterwards. 
+
+During Round 1, SppofGuard examines static features about the site, such as the domain name (as well as edit distance to known common domains), URL, and email fields. These features are evaluated according to a pre-developed heuristic to determine a threat score for the page. 
+
+Round 2,which takes place after the page has rendered, examines  elements, such as password fields (especially those that are unencrypted), links, and images. These features are similarly combined through a heuristic. In addition to password fields, Spoofguard also tracks password usage and warns the user before submitting passwords to dangerous sites. 
+
+However, SpoofGuard does not defend against determined attackers - it only makes it more difficult to set up a fake site. Search engines could also mitigate the problem of spoofed URLs through an automatic Google search and then comparing Google results to intended sites.
+	
+
+### Active insecurity
+
+One overarching theme related to the approaches and tools presented above is that most tools attempt to actively present indicators of security. Symbols such as green locks and shields inform the user that the browser state or display are secure. This informs the existence and location of trusted browser elements. However, active security indicators can be easily spoofed by phishing sites that also present these indicators. In contrast, presenting active indicators of insecurity, rather than security. This could be warning indicators of insecurity in place of positive security indicators. For example, if a red border is placed around insecure elements, the page content cannot easily modify this insecurity indicator to instead establish trust with the user. This approach to security UI needs more examination in the research community.
+
+
 # Deliverable Conclusion and Project Roadmap
 In this blog post, we first motivated and described our semester's efforts 
 towards the Line of Trust project, using our class presentation slides and a
@@ -195,3 +247,5 @@ The experimental answers to these questions would help us determine whether this
 - [http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.464.9463&rep=rep1&type=pdf](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.464.9463&rep=rep1&type=pdf)
 - [http://up.csail.mit.edu/projects/phishing/chi-security-toolbar.pdf](http://up.csail.mit.edu/projects/phishing/chi-security-toolbar.pdf)
 - [http://www.guanotronic.com/~serge/papers/chi07.pdf](http://www.guanotronic.com/~serge/papers/chi07.pdf)
+- [https://crypto.stanford.edu/SpoofGuard/](https://crypto.stanford.edu/SpoofGuard/)
+- [http://delivery.acm.org/10.1145/1070000/1065546/p153-ye.pdf](http://delivery.acm.org/10.1145/1070000/1065546/p153-ye.pdf)
