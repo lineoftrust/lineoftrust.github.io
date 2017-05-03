@@ -24,8 +24,6 @@ The goal of this blog post is to present the culmination of our work throughout 
 six weeks of the semester and provide a roadmap for our team's plans to move
 forward through the summer months.
 
-TODO: Add anything else relevant to the project overview and this post's
-overview here.
 
 # Presentation
 <script async class="speakerdeck-embed"
@@ -39,9 +37,6 @@ problem through a case study of an elaborate picture-in-picture [Microsoft Suppo
 Scam](https://www.tripwire.com/state-of-security/latest-security-news/tech-support-scam-uses-website-elements-spoof-microsoft-support-page/) 
 reported in March 2017.
 
-TODO: Talk about the presentation and its slides for a few paragraphs and relate it to what we are
-posting below. In particular, discuss the relevance of the Microsoft support
-picture-in-picture case study.
 
 # Introduction
 The state of web browser client UI today is best described as a disjoint medley of vulnerabilities, contradictory design principles, and implied security conditions.  Apart from the overarching design paradigm of a URL bar perched above page content with a tab-interface situated nearby, almost all aspects of contemporary web browsers vary from one vendor to the next.  There exist no universal security indicators, nor are the relative levels of security—think mixed HTTPS vs full HTTPS—ever explicitly presented to consumers of these products.  Warning prompts, pop-ups, and alerts are all handled differently.  Settings are difficult to find.  Extensive assortments of flags, optional settings, and advanced content featuers are tucked away far beneath the visible surface of the browser interface. 
@@ -138,11 +133,18 @@ advantages of implementing a trusted path, however, are quite effective and
 serve as a model of a solution to picture-in-picture attacks from the trusted
 base of the browser.
 
-## Paper N ... etc
+## Rethinking URL Bars as Primary Browser UI
+In [this work](https://medium.com/@owencm/rethinking-url-bars-as-primary-browser-ui-e2118339d2c0), Google employee Owen Campbell-Moore argues that the browser URL bar provides users with antiquated information and provides a call-to-action for overhauling browser UI.  This piece is of particular interest to the systematization since it directly addresses browser UI, and the solution proposed—overhauling browser UI by removing the URL bar and replacing it with an _origin-to-local-brand-mapping_ interface—would greatly alter the browser security landscape.  According to Campbell-Moore, URL bars exist to perform three basic tasks:
 
-## Conclusion/Tie-In
-TODO: Relate the systematizations and discuss their purpose in our target of
-motivating the need for research in the Line of Death class of attacks.
+1. They provide the identity of the site we’re visiting (domain name, title tag)
+2. They tell us our relative location in the site organization (path)
+3. They provide an easy-to-share resource link (URL)
+
+Tasks (1) and (2) are increasingly unnecessary, since most users rely on search engines, apps, bookmarks, and history to navigate to destination sites.  As a result, there are fewer opportunities to manually provide URLs, and as mobile browsing continues to decimate client browsing, there will be even fewer.  The user’s current path location on websites is used even less, especially given the proliferation of dynamically generated "app-like" content of Web 2.0.  In fact, Campbell-Moore argues that only (3) is still legitimate, but even that is being replaced by the ubiquitous "share" buttons connected to various social media entities.
+
+_Origin-to-local-brand-mapping_ would operate in a manner similar to DNS or certificates, in that an "identity" is mapped to a resource, except in this case, the identity would consist of a name and a logo.  The idea would be to _only_ provide this mapping to certain "well known" web sites, thus avoiding the scenario in which a legitimate site registers for the mapping service.  As a result, it would be very obvious to casual browsers whether they have arrived at the **real** PayPal.com or not, since the **real** PayPal.com will come with an origin-to-local-brand-mapping that clearly signals its legitimacy.
+
+Obvious concerns include the notion of compiling and maintaining a "well-known sites" index, since at face value, this seems to violate neutrality and place a vast amount of power into one organization’s hands (likely a search engine, likely Google).
 
 # Deliverable Conclusion and Project Roadmap
 In this blog post, we first motivated and described our semester's efforts 
