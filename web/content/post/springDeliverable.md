@@ -80,7 +80,7 @@ Our systematization follows a uniform process that enables us to categorize, ass
 5. **What are the pros and cons of the solutions with respect to security, usability, and ease of adoption?**  Will people use it?  What security guarantees are implied?  How likely is it that users will actually interact with the solution mechanism?
 6. [if viable] **Based on the resource, how would you suggest proceeding with the implementation of the solution?**
 
-<h2 id="a-trused-ui-for-the-mobile-web">A Trusted UI for the Mobile Web (2014)</h2>
+## A Trusted UI for the Mobile Web (2014)
 
 <p>The population increasingly relies on mobile devices to browse the web. However, though mobile devices come with increased security concerns, the literature in this space is shockingly sparse. Braun et al. attempts to classify and target a set of major threats to browser security: phishing, clickjacking, CSRF, XSS, and session fixation. Braun divides these threats into five main classes: phishing, clickjacking, CSRF, XSS, and session fixation. Each attack is unique in its goals or means to achieve them. The goal of a phishing attack is to convince the user to divulge personal information, whereas clickjacking is when an attacker will attempt to force or coerce the user to click on an icon or button. CSRF attacks involve a crafted URL that causes the browser to send a request to the web application on behalf of the user. XSS attackers insert malicious code into otherwise benign websites, this code often runs without prompting. For a session fixation attack to be successful, the attacker sets an SID before logon, then accesses the user’s session simultaneously to the user, impersonating them.</p>
 
@@ -96,7 +96,7 @@ Our systematization follows a uniform process that enables us to categorize, ass
 
 <p>More analysis is required with regards to security; new or continuing threats to this proposed solution need to be thoroughly evaluated before its adoption. Whether or not the app request itself is spoofable seems like it would be a significant factor in the potential for adoption. The applications need to be set up in such a way that users still have the ability to enter their credentials on unauthenticated sites if they choose to. We also need to ask moral questions such as: Does requiring a server-side module threaten net neutrality?</p>
 
-<h2 id="trusted-paths-for-browsers">Trusted Paths for Browsers (2002)</h2>
+## Trusted Paths for Browsers (2002)
 
 <p>Zishuang attempts to define a system for differentiating content elements, which make up webpages, from status elements, which lie in the browser bar and indicate meta-data like the URL. As it stood at the time of the paper, no significant differentiating feature exists to give users a trusted sense of where a given element is coming from. Users are often tricked by false browser notifications, and providing a way for them to identify true browser notifications would greatly benefit a variety of users.</p>
 
@@ -114,7 +114,7 @@ Our systematization follows a uniform process that enables us to categorize, ass
 
 <p>CMW-style solutions and others mentioned in the paper are not easily applicable to mobile devices, though the process for finding solutions remains valid. The primary issues with these solutions is that they expect users to be vigilant and that they are based in the idea that there are pixels on the screen that are in no case accessible to users. Adoption of such a solution is unlikely. Without that assurance, every potential solution is spoofable. While the provided solutions might be viable, user backing is unlikely and implementation issues arise. For instance, Firefox prevents scripts in non-active windows, meaning that the secondary window that provides the reference color in the SRD solution would freeze at its initial color until the user switches windows. This means that the synchronized random color changing would be impossible.</p>
 
-<h2 id="your-attention-please">Your Attention Please (2013)</h2>
+## Your Attention Please (2013)
 
 <p>Bravo-Lillo et al. address the “boy who cried wolf” problem facing web browser user interfaces. In contemporary browsers, users are inundated with excessive warnings, which, dangerously, desensitizes them to alerts of real risks. When deciding whether to visit insecure sites while browsing, it is essential for browsers to convey security messages that are effective, meaningful, and minimally disruptive. The user study conducted by Bravo-Lillo et al. evaluates the ability of particular types of warning elements to cause users to deviate from their “script”.</p>
  
@@ -124,7 +124,7 @@ Our systematization follows a uniform process that enables us to categorize, ass
  
 <p>While the specifics of this particular software implementation studied in this paper are not necessarily directly applicable, implementing similar indicators for user actions would be potentially useful. For example, when typing in a password field, prompting the user to interact with the browser URL in some way could help protect users from phishing attacks. More importantly, the principles of these attractors could be helpful for conveying vital security information to the user, like an insecure site.</p>
  
- <h2 id="you-can't-be-me">You Can't Be Me: Enabling Trusted Paths & User Sub-Origins in Web Browsers (2014)</h2>
+## You Can't Be Me: Enabling Trusted Paths & User Sub-Origins in Web Browsers (2014)
  
  <p>Budianto and his team attempt to address scripts that are injected into a web session (malicious scripts included) after the user is authenticated that have complete access to user-owned resources. Budianto et al. focus on defending against post-injection script execution (PISE) attacks. Web applications that provide services to users with accounts (DropBox, Gmail, Facebook) restrict access control using the notion of user authority. Usually, this access is governed by the same-origin policy. However, this is insufficient. Injected scripts appear to the web server to come from the same origin as user input, with the same protocol, host, and port. Thus, server-side web applications cannot distinguish between the real user’s requests and requests generated by scripts.</p>
  
